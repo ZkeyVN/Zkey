@@ -1,0 +1,2759 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-1495ee35"], {
+    "0b6b": function(e, t, s) {
+        "use strict";
+        s("94f6")
+    },
+    "31e8": function(e, t) {
+        function s(e) {
+            var t = new Error("Cannot find module '" + e + "'");
+            throw t.code = "MODULE_NOT_FOUND",
+            t
+        }
+        s.keys = function() {
+            return []
+        }
+        ,
+        s.resolve = s,
+        e.exports = s,
+        s.id = "31e8"
+    },
+    7983: function(e, t, s) {
+        "use strict";
+        s.r(t);
+        s("14d9");
+        var i = function() {
+            var e = this
+              , t = e._self._c;
+            return t("div", {
+                ref: "gameCenterContainer",
+                staticClass: "game-center-container",
+                class: [e.nowGame.gameName, e.nowGame.subName]
+            }, [t("hr", {
+                staticClass: "Chr"
+            }), t("div", {
+                staticClass: "topBg"
+            }, [t("div", {
+                ref: "issueWrap",
+                staticClass: "issue-wrap"
+            }, [e.nowGame.isCustomIssueStyle ? [t("div", {
+                staticClass: "RULTI_pasteIssueStyle"
+            }, [t("div", {
+                staticClass: "cardTop"
+            }, [t("div", {
+                staticClass: "cardScroll"
+            }, [e._l(e.historyData, (function(s) {
+                return ["RULTI" == e.nowGame.gameName ? [t("rulti_result", {
+                    attrs: {
+                        resultValue: s,
+                        blockStyle: "true"
+                    }
+                })] : "RB" == e.nowGame.gameName ? [t("rb_result", {
+                    attrs: {
+                        resultValue: s.value
+                    }
+                })] : e._e()]
+            }
+            ))], 2), t("div", {
+                staticClass: "arrowBlock",
+                on: {
+                    click: e.showHistoryPanel
+                }
+            }, [t("span", {
+                staticClass: "arrowIcon"
+            })])])])] : [["FSLOT", "HILO"].includes(e.nowGame.gameName) ? t("p", {
+                staticClass: "hiloIssue"
+            }, [e._v(" No." + e._s(e.curIssue) + " ")]) : [t("div", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "issue"
+            }, [e._v(" No." + e._s(e.nowGame.isGuessStruc ? e.currentIssue : e.gameConfig.currentIssue.issue) + " ")]), -2 != e.gameConfig.info.status ? [t("b", {
+                staticClass: "timeBar timeClock",
+                class: e.canBet ? "" : "canNotBet"
+            }, [t("img", {
+                staticClass: "icon-kaijiangshijian",
+                attrs: {
+                    src: "/images/kaijiangshijian.png",
+                    alt: ""
+                }
+            }), e._v(e._s(e.timeBar))])] : t("b", {
+                staticClass: "timeBar"
+            }, [e._v(e._s(e.$t("version3.maintain")))])], 2), e.nowGame.isGuessStruc ? e._e() : t("div", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "issue"
+            }, [e._v("No." + e._s(e.gameConfig.lastIssue.issue))]), t("span", {
+                on: {
+                    click: e.showHistoryPanel
+                }
+            }, [t("img", {
+                staticClass: "icon-kaijiang",
+                attrs: {
+                    src: "/images/kaijiang.png",
+                    alt: ""
+                }
+            }), t("span", {
+                staticClass: "hash",
+                class: e.isHLGame ? "HL_resultStyle" : e.isSDGame ? "SD1M_resultStyle" : ""
+            }, [!e.isChangeGameNow && e.nowGame.luckyWheelStruc ? [t("i", {
+                staticClass: "openNum RLT_openNum"
+            }), e.gameConfig.lastIssue && e.gameConfig.lastIssue.resultVal && e.gameConfig.lastIssue.resultVal.simpleResultFormatList ? [t("rlt_symbol", {
+                attrs: {
+                    result: e.gameConfig.lastIssue.resultVal.simpleResultFormatList
+                }
+            })] : e._e()] : e.isChangeGameNow || !e.isLK28Game && !e.isTSGame ? !e.isChangeGameNow && e.isFSTGame ? [t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticStyle: {
+                    color: "#fff"
+                }
+            }, [e._v("+")]), t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticStyle: {
+                    color: "#fff"
+                }
+            }, [e._v("+")]), t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticStyle: {
+                    color: "#fff"
+                }
+            }, [e._v("+")]), t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticStyle: {
+                    color: "#fff"
+                }
+            }, [e._v("=")]), t("i", {
+                staticClass: "openNum",
+                staticStyle: {
+                    color: "#eac83e"
+                }
+            })] : !e.isChangeGameNow && e.nowGame.lotStruc ? [t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), /^(TWLT|SPLT)/.test(e.nowGame.gameName) ? t("i", {
+                staticClass: "openNum LOT_openNum"
+            }) : e._e(), t("i", {
+                staticClass: "openNum LOT_openNum last_LOT_openNum"
+            })] : !e.isChangeGameNow && e.isTWTLGame ? [t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            }), t("i", {
+                staticClass: "openNum LOT_openNum"
+            })] : !e.isChangeGameNow && e.isQTGame ? [t("img", {
+                staticClass: "openNum QT_openNum",
+                staticStyle: {
+                    "margin-left": "5px"
+                }
+            }), t("img", {
+                staticClass: "openNum QT_openNum",
+                staticStyle: {
+                    "margin-left": "5px"
+                }
+            }), t("img", {
+                staticClass: "openNum QT_openNum",
+                staticStyle: {
+                    "margin-left": "5px"
+                }
+            })] : !e.isChangeGameNow && e.isKNGame ? [t("p", {
+                staticStyle: {
+                    "text-align": "right"
+                }
+            }, e._l(10, (function(e) {
+                return t("i", {
+                    key: e,
+                    staticClass: "openNum",
+                    staticStyle: {
+                        "margin-left": "5px",
+                        "font-size": "12px"
+                    }
+                })
+            }
+            )), 0), t("p", {
+                staticStyle: {
+                    "text-align": "right"
+                }
+            }, e._l(10, (function(e) {
+                return t("i", {
+                    key: e,
+                    staticClass: "openNum",
+                    staticStyle: {
+                        "margin-left": "5px",
+                        "font-size": "12px"
+                    }
+                })
+            }
+            )), 0)] : !e.isChangeGameNow && e.isFTGame ? [t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            })] : !e.isChangeGameNow && e.isCQKGame ? [t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("b", [e._v("...")]), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            })] : !e.isChangeGameNow && e.isHLGame ? [t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticClass: "purpleCircle circle"
+            }), t("span", {
+                staticClass: "redCircle circle",
+                attrs: {
+                    id: "redCircle"
+                }
+            }), t("span", {
+                staticClass: "greenCircle circle",
+                attrs: {
+                    id: "greenCircle"
+                }
+            })] : !e.isChangeGameNow && e.isRD100NGame ? [t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            }), t("i", {
+                staticClass: "openNum"
+            })] : e.isChangeGameNow ? e._e() : [t("span", {
+                ref: "a",
+                staticClass: "circle"
+            }), t("span", {
+                ref: "a",
+                staticClass: "circle"
+            }), t("span", {
+                ref: "a",
+                staticClass: "circle"
+            }), t("span", {
+                ref: "a",
+                staticClass: "circle"
+            })] : [t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticStyle: {
+                    color: "#fff"
+                }
+            }, [e._v("+")]), t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticStyle: {
+                    color: "#fff"
+                }
+            }, [e._v("+")]), t("i", {
+                staticClass: "openNum"
+            }), t("span", {
+                staticStyle: {
+                    color: "#fff"
+                }
+            }, [e._v("=")]), t("i", {
+                staticClass: "openNum",
+                staticStyle: {
+                    color: "#eac83e"
+                }
+            })], e.isFTGame || e.isKNGame || e.nowGame.isLotStruc ? t("span", {
+                staticStyle: {
+                    "margin-top": "6px",
+                    height: "20px",
+                    "line-height": "20px"
+                }
+            }, [e.isLotGame && e.gameConfig.lastIssue.resultVal && e.gameConfig.lastIssue.resultVal.value ? t("ins", {
+                staticStyle: {
+                    color: "#fcd434"
+                }
+            }, [e._v(e._s(e.getSum(e.gameConfig.lastIssue.resultVal.value)))]) : e._e(), e.gameConfig.lastIssue && e.gameConfig.lastIssue.resultVal && e.gameConfig.lastIssue.resultVal.simpleResultFormatList ? [e.isFTGame ? [e._l(e.gameConfig.lastIssue.resultVal.simpleResultFormatList, (function(s) {
+                return [e.FT_IconMap[s.replace(e.gameConfig.info.subServiceCode + "_", "").replace(/\./g, "").trim()] ? t("icon-svg", {
+                    staticClass: "FT_ICON",
+                    attrs: {
+                        iconClass: e.FT_IconMap[s.replace(e.gameConfig.info.subServiceCode + "_", "").replace(/\./g, "").trim()]
+                    }
+                }) : "2_4" == s.replace(e.gameConfig.info.subServiceCode + "_", "").replace(/\./g, "").trim() ? t("img", {
+                    staticClass: "FT_ICON",
+                    attrs: {
+                        src: "/images/dragon.png",
+                        alt: ""
+                    }
+                }) : "2_5" == s.replace(e.gameConfig.info.subServiceCode + "_", "").replace(/\./g, "").trim() ? t("img", {
+                    staticClass: "FT_ICON",
+                    attrs: {
+                        src: "/images/tiger.png",
+                        alt: ""
+                    }
+                }) : t("ins", {
+                    staticStyle: {
+                        color: "#fff"
+                    }
+                }, [e._v(e._s(e.$t("gameBetOptionName." + s.replace(e.gameConfig.info.subServiceCode + "_", "SB_").replace(/\./g, "-"))))])]
+            }
+            ))] : e._e(), e.isKNGame || e.isLotGame ? t("div", [e._l(e.gameConfig.lastIssue.resultVal.simpleResultFormatList, (function(s) {
+                return ["number" === typeof s ? t("ins", {
+                    staticStyle: {
+                        color: "#fcd434"
+                    }
+                }, [e._v(e._s(s))]) : e.KN_IconMap[s.replace(e.gameConfig.info.subServiceCode + "_", "").replace(/\./g, "-").trim()] ? t("icon-svg", {
+                    staticClass: "FT_ICON",
+                    attrs: {
+                        iconClass: e.KN_IconMap[s.replace(e.gameConfig.info.subServiceCode + "_", "").replace(/\./g, "-").trim()]
+                    }
+                }) : e._e()]
+            }
+            ))], 2) : e._e()] : e._e()], 2) : e._e()], 2), t("b", {
+                staticClass: "triangleRight"
+            })])])], e.nowGame.isGuessStruc ? t("div", {
+                staticClass: "__ms-style-info"
+            }, [t("div", {
+                staticClass: "l"
+            }, [t("span", {
+                staticClass: "issue"
+            }, [e._v(" " + e._s(e.$t("version24.nextRebateAward")) + "： ")]), t("b", {
+                staticClass: "txt",
+                class: e.isHasOpenBlank && e.isGame ? "nextMulti" : ""
+            }, [e._v(" " + e._s(e.isHasOpenBlank && e.isGame ? e.gameConfig.myInfo.nextMulti : "---") + " ")])]), t("div", {
+                staticClass: "r"
+            }, [t("span", {
+                staticClass: "issue"
+            }, [e._v(e._s(e.$t("version24.avaMoney")) + "：")]), t("span", {
+                staticClass: "issue"
+            }, [e.isGame && e.isHasOpenBlank ? [e._v(" " + e._s(e.gameConfig.myInfo.currentMulti) + " x " + e._s(e.betUnitMoney) + " = "), t("ins", {
+                staticClass: "finalSettleMoney"
+            }, [e._v(e._s(e.gameConfig.myInfo.settleAmount))])] : [e._v(" --- ")]], 2)]), t("icon-svg", {
+                attrs: {
+                    iconClass: "explain"
+                },
+                nativeOn: {
+                    click: function(t) {
+                        return t.stopPropagation(),
+                        e.jumpRule.apply(null, arguments)
+                    }
+                }
+            })], 1) : e._e()]], 2)]), t("div", {
+                ref: "pageContent",
+                staticClass: "page-content"
+            }, ["FSLOT" == e.nowGame.gameName ? [t("fslot", {
+                ref: "fslot",
+                on: {
+                    animateEnd: e.fsAniEnd
+                }
+            })] : [e.isChangeGameNow ? e._e() : t("div", {
+                staticClass: "betMain"
+            }, [e.nowGame.isCardGame ? t("div", {
+                staticClass: "hilo_history"
+            }, [t("div", {
+                staticClass: "cardTop"
+            }, [t("div", {
+                staticClass: "cardScroll"
+            }, [e._l(e.historyData, (function(s, i) {
+                return [i < 10 ? t("div", {
+                    staticClass: "card",
+                    class: s.card.suit
+                }, [t("span", {
+                    staticClass: "cardTag"
+                }, [e._v(e._s(s.card.name))]), t("span", {
+                    staticClass: "centerTag"
+                }, [e._v(e._s(s.card.suit))]), 0 == i ? t("div", {
+                    staticClass: "newTag"
+                }, [e._v("NEW")]) : e._e()]) : e._e()]
+            }
+            ))], 2), t("div", {
+                staticClass: "sendCard"
+            }), t("div", {
+                staticClass: "sendCard"
+            }), t("div", {
+                staticClass: "sendCard"
+            })]), t("div", {
+                ref: "send_systemCard",
+                staticClass: "sendCard sendCard_move sendCard_system",
+                class: {
+                    sendCardAnimation_system: e.excuteSendCard_system
+                }
+            }), t("div", {
+                ref: "send_userCard",
+                staticClass: "sendCard sendCard_move",
+                class: {
+                    sendCardAnimation_user: e.excuteSendCard_user
+                }
+            }), t("div", {
+                staticClass: "cardBox"
+            }, [t("div", {
+                directives: [{
+                    name: "show",
+                    rawName: "v-show",
+                    value: e.isShowCard,
+                    expression: "isShowCard"
+                }],
+                ref: "open_systemCard",
+                staticClass: "card systemCard",
+                class: {
+                    cardMove_system: e.isMoveCardAfterOpen,
+                    throwCard: e.isThrowCard,
+                    cardAnimate_rotate: e.isAnimateTime
+                }
+            }, [e.hilo_systemCard ? t("div", {
+                staticClass: "poker",
+                class: e.hilo_systemCard.suit
+            }, [t("div", {
+                staticClass: "cardTag"
+            }, [e._v(e._s(e.hilo_systemCard.name))]), t("div", {
+                staticClass: "centerTag suit"
+            }, [e._v(e._s(e.hilo_systemCard.suit))])]) : e._e(), t("div", {
+                ref: "systemCard_bg",
+                staticClass: "cardBg",
+                class: e.hilo_systemCard ? "cardAnimate" : ""
+            })]), t("div", {
+                staticClass: "cardPlaceholder"
+            }), t("div", {
+                directives: [{
+                    name: "show",
+                    rawName: "v-show",
+                    value: e.isShowCard,
+                    expression: "isShowCard"
+                }],
+                staticClass: "card userCard",
+                class: {
+                    cardMove_user: e.isMoveCardAfterOpen
+                }
+            }, [t("div", {
+                staticClass: "poker",
+                class: e.hilo_userCard && e.hilo_userCard.card.suit
+            }, [e.hilo_userCard ? t("div", {
+                staticClass: "cardTag"
+            }, [e._v(" " + e._s(e.hilo_userCard.card.name) + " ")]) : e._e(), e.hilo_userCard ? t("div", {
+                staticClass: "centerTag suit"
+            }, [e._v(" " + e._s(e.hilo_userCard.card.suit) + " ")]) : e._e()]), t("div", {
+                staticClass: "changeCardBtn",
+                on: {
+                    click: e.changeUserCard
+                }
+            })])])]) : e._e(), "RULTI" == e.nowGame.gameName ? t("rulti", {
+                ref: "rulti",
+                on: {
+                    rultiAniEnd: e.rultiAniEnd
+                }
+            }) : e._e(), "RB" == e.nowGame.gameName ? t("RB", {
+                ref: "RB"
+            }) : e._e(), e.nowGame.isShowBetTip ? [t("p", {
+                staticClass: "betTip"
+            }, [t("span", {
+                staticClass: "text"
+            }, [e._v(e._s(e.getRuleTxt()))]), t("icon-svg", {
+                attrs: {
+                    iconClass: "explain"
+                },
+                nativeOn: {
+                    click: function(t) {
+                        return t.stopPropagation(),
+                        e.jumpRule.apply(null, arguments)
+                    }
+                }
+            })], 1)] : e._e(), /HILO/.test(e.nowGame.gameName) ? t("div", {
+                staticClass: "hiloBox"
+            }, [t("div", {
+                staticClass: "btnBox"
+            }, [t("div", {
+                staticClass: "__btn lt",
+                class: {
+                    disableStyle: e.hilo_userCard && 1 == e.hilo_userCard.card.num,
+                    active: e.plusMinusValue.includes("lt")
+                },
+                on: {
+                    click: function(t) {
+                        return e.chooseHILOBetOption("lt")
+                    }
+                }
+            }, [t("div", {
+                staticClass: "bg"
+            }), t("p", {
+                staticClass: "txt"
+            }, [e._v(e._s(e.$t("version23.lt")))]), t("p", [e.hilo_userCard && e.hilo_userCard.lt ? [e._v(" " + e._s(e.hilo_userCard.lt.multi) + "x ")] : e._e()], 2)]), t("div", {
+                staticClass: "__btn eq",
+                class: e.plusMinusValue.includes("eq") ? "active" : "",
+                on: {
+                    click: function(t) {
+                        return e.chooseHILOBetOption("eq")
+                    }
+                }
+            }, [t("p", {
+                staticClass: "txt"
+            }, [e._v(e._s(e.$t("version27.equal")))]), t("p", [e.hilo_userCard && e.hilo_userCard.eq ? [e._v(" " + e._s(e.hilo_userCard.eq.multi) + "x ")] : e._e()], 2)]), t("div", {
+                staticClass: "__btn gt",
+                class: {
+                    disableStyle: e.hilo_userCard && 13 == e.hilo_userCard.card.num,
+                    active: e.plusMinusValue.includes("gt")
+                },
+                on: {
+                    click: function(t) {
+                        return e.chooseHILOBetOption("gt")
+                    }
+                }
+            }, [t("div", {
+                staticClass: "bg"
+            }), t("p", {
+                staticClass: "txt"
+            }, [e._v(e._s(e.$t("version23.gt")))]), t("p", [e.hilo_userCard && e.hilo_userCard.gt ? [e._v(" " + e._s(e.hilo_userCard.gt.multi) + "x ")] : e._e()], 2)])])]) : e.nowGame.lotStruc ? t("div", {
+                staticClass: "lotStruc lot_Style"
+            }, e._l(e.gameConfig.info.options, (function(s) {
+                return t("div", {
+                    staticClass: "floorBox"
+                }, [t("p", {
+                    staticClass: "floorTitle"
+                }, [e._v(" " + e._s(s.name) + " "), "S" != s.value ? t("span", {
+                    staticClass: "rebateMulti"
+                }, [e._v(" " + e._s(e.$t("version25.rebateMulti")) + "："), t("ins", [e._v(e._s(e.toFloor(e.transMulti(s.value), 2)) + "X")])]) : e._e()]), t("div", {
+                    staticClass: "betPanel",
+                    class: {
+                        RED: "betDiv_red_ballStyle",
+                        WHITE: "betDiv_white_ballStyle"
+                    }[s.value]
+                }, [e._l(s.nextOptions, (function(i, a) {
+                    return t("div", {
+                        key: a,
+                        staticClass: "betDiv",
+                        class: i.isSel ? "sel" : "",
+                        on: {
+                            click: function(t) {
+                                return e.selBetNum(i, a)
+                            }
+                        }
+                    }, [t("span", {
+                        staticClass: "label"
+                    }, [e._v(e._s(i.name))]), "S" == s.value ? t("span", {
+                        staticClass: "num"
+                    }, [e._v(e._s(i.multi) + "x")]) : e._e()])
+                }
+                )), s.nextOptions.length % 10 && "S" != s.value ? e._l(10 - s.nextOptions.length % 10, (function(e) {
+                    return t("div", {
+                        staticClass: "betDiv",
+                        staticStyle: {
+                            opacity: "0"
+                        }
+                    })
+                }
+                )) : e._e()], 2)])
+            }
+            )), 0) : e.nowGame.luckyWheelStruc ? t("div", {
+                staticClass: "rltStruc"
+            }, [t("div", {
+                staticClass: "rouletteBox"
+            }, [t("img", {
+                staticClass: "bg",
+                attrs: {
+                    src: "/images/roulette.png?v=4",
+                    alt: ""
+                }
+            }), t("img", {
+                ref: "wheel_light",
+                staticClass: "light",
+                attrs: {
+                    src: "/images/roulette_light.png",
+                    alt: ""
+                }
+            }), t("img", {
+                ref: "turnLight",
+                staticClass: "turnLight",
+                attrs: {
+                    src: "/images/roulette_turnLight.png",
+                    alt: ""
+                }
+            }), t("div", {
+                ref: "centerOpenNum",
+                staticClass: "centerOpenNum",
+                attrs: {
+                    id: "centerOpenNum"
+                }
+            })]), t("div", {
+                staticClass: "numBetPanelBox"
+            }, [t("div", {
+                staticClass: "numPanel"
+            }, [e._l(e.gameConfig.info.options, (function(s, i) {
+                return [i < 37 && i ? t("div", {
+                    key: s.value,
+                    staticClass: "numBox",
+                    class: s.isSel ? "sel" : "",
+                    on: {
+                        click: function(t) {
+                            return e.selBetNum(s, i)
+                        }
+                    }
+                }, [t("span", {
+                    staticClass: "label"
+                }, [e._v(e._s(s.name))])]) : e._e()]
+            }
+            ))], 2), t("div", {
+                staticClass: "multiBox"
+            }, [e._v(e._s(e.rottlePanelBoxMul) + "x")])]), t("div", {
+                staticClass: "betPanel"
+            }, [e._l(e.gameConfig.info.options, (function(s, i) {
+                return [i >= 37 ? t("div", {
+                    key: i,
+                    staticClass: "betDiv",
+                    class: s.isSel ? "sel" : "",
+                    on: {
+                        click: function(t) {
+                            return e.selBetNum(s, i)
+                        }
+                    }
+                }, [t("span", {
+                    staticClass: "label"
+                }, [e._v(e._s(s.name))]), s.isNumber ? e._e() : t("span", {
+                    staticClass: "num"
+                }, [e._v(e._s(s.multi) + "x")])]) : e._e()]
+            }
+            ))], 2)]) : e.nowGame.isTreeStruc ? t("div", {
+                staticClass: "thirdFloorBox"
+            }, [t("div", {
+                staticClass: "topModePanel",
+                class: e.nowGame.isTwoFloorStruc ? "twoFloorGameStyle" : ""
+            }, [e._l(e.nowGame.skelotonObj, (function(s) {
+                return [t("span", {
+                    staticClass: "topBetItem",
+                    class: {
+                        activeMode: s.isSel,
+                        modeItem: !e.nowGame.isTwoFloorStruc
+                    },
+                    on: {
+                        click: function(t) {
+                            return e.changePlayMode(s, e.nowGame.skelotonObj, 1)
+                        }
+                    }
+                }, [e.isTWTLGame ? ["S5M2" == s.value && 5 == e.eachTopModeBetNum[s.value].length || "S5T12" == s.value && e.eachTopModeBetNum[s.value].length >= 5 && e.eachTopModeBetNum[s.value].length <= 12 ? t("b", {
+                    staticClass: "thisModeBetNum"
+                }, [e._v("1")]) : e._e()] : e.eachTopModeBetNum[s.value].length ? t("b", {
+                    staticClass: "thisModeBetNum"
+                }, [e._v(e._s(e.eachTopModeBetNum[s.value].length))]) : e._e(), t("ins", [e._v(e._s(s.name))])], 2)]
+            }
+            ))], 2), e.isTWTLGame ? t("div", {
+                staticClass: "twtlBox"
+            }, e._l(e.nowGame.skelotonObj, (function(s) {
+                return t("div", {
+                    key: s.value
+                }, ["S5M2" == s.value && s.isSel ? [t("p", {
+                    staticClass: "twtlRebateTip"
+                }, [t("span", [e._v(e._s(e.$t("version30.t1")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(8)) + "X")])]), t("span", [e._v(e._s(e.$t("version30.t2")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(98)) + "X")])])]), t("p", {
+                    staticClass: "twtlRebateTip"
+                }, [t("span", [e._v(e._s(e.$t("version30.t3")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(2888)) + "X")])]), t("span", [e._v(e._s(e.$t("version30.t4")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(38888)) + "X")])])])] : e._e(), "S5T12" == s.value && s.isSel ? [t("p", {
+                    staticClass: "twtlRebateTip"
+                }, [t("span", [e._v(e._s(e.$t("version30.t5")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(2.0691)) + "X")])]), t("span", [e._v(e._s(e.$t("version30.t7")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(2.4259)) + "X")])])]), t("p", {
+                    staticClass: "twtlRebateTip"
+                }, [t("span", [e._v(e._s(e.$t("version30.t8")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(2.8591)) + "X")])]), t("span", [e._v(e._s(e.$t("version30.t9")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(3.3885)) + "X")])])]), t("p", {
+                    staticClass: "twtlRebateTip"
+                }, [t("span", [e._v(e._s(e.$t("version30.t10")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(4.0402)) + "X")])]), t("span", [e._v(e._s(e.$t("version30.t11")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(4.8482)) + "X")])])]), t("p", {
+                    staticClass: "twtlRebateTip"
+                }, [t("span", [e._v(e._s(e.$t("version30.t12")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(5.8583)) + "X")])]), t("span", [e._v(e._s(e.$t("version30.t13")) + "："), t("span", {
+                    staticClass: "wt"
+                }, [e._v(e._s(e.calTWTLRebateValue(7.1318)) + "X")])])])] : e._e()], 2)
+            }
+            )), 0) : e._e(), e._l(e.nowGame.skelotonObj, (function(s) {
+                return [s.isSel ? [s.isHasNext ? t("div", {
+                    staticClass: "secondMode"
+                }, [t("div", {
+                    ref: "topTab",
+                    refInFor: !0,
+                    staticClass: "wrapBox"
+                }, [e._l(s.options, (function(i) {
+                    return [t("div", {
+                        ref: "modeItem",
+                        refInFor: !0,
+                        staticClass: "modeItem",
+                        class: i.isSel ? "activeMode" : "",
+                        attrs: {
+                            id: i.value
+                        },
+                        on: {
+                            click: function(t) {
+                                return e.changeSecondMode(i, s.options, s)
+                            }
+                        }
+                    }, [e._v(" " + e._s(i.name) + " ")])]
+                }
+                ))], 2)]) : e._e(), e.betPanelData ? t("div", {
+                    staticClass: "thirdMode",
+                    class: s.isHasNext ? "" : "twoFloorStyle"
+                }, [e.isTWTLGame ? t("p", {
+                    staticClass: "floorTitle",
+                    staticStyle: {
+                        "text-align": "left",
+                        color: "#fff"
+                    }
+                }, [e._v(e._s(e.$t("version20.betNumber")))]) : e._e(), t("div", {
+                    staticClass: "betPanel",
+                    class: e.isTWTLGame ? "betDiv_white_ballStyle" : ""
+                }, [e._l(e.betPanelData, (function(s, i) {
+                    return t("div", {
+                        key: i,
+                        staticClass: "betDiv",
+                        class: s.isSel ? "sel" : "",
+                        on: {
+                            click: function(t) {
+                                return e.selBetNum(s, i)
+                            }
+                        }
+                    }, [t("span", {
+                        staticClass: "label"
+                    }, [e._v(e._s(s.name))]), e.isTWTLGame ? e._e() : t("span", {
+                        staticClass: "num"
+                    }, [e._v(e._s(s.multi) + "x")])])
+                }
+                )), e.betPanelData.length % 4 ? e._l(4 - e.betPanelData.length % 4, (function(e) {
+                    return t("div", {
+                        staticClass: "betDiv",
+                        staticStyle: {
+                            opacity: "0"
+                        }
+                    })
+                }
+                )) : e._e()], 2)]) : e._e()] : e._e()]
+            }
+            ))], 2) : e.nowGame.isGuessStruc ? t("div", {
+                staticClass: "guessBox"
+            }, [t("div", {
+                staticClass: "betPanel"
+            }, [e._l(e.guessOption, (function(s, i) {
+                return e._l(s, (function(a, n) {
+                    return t("div", {
+                        key: i * s.length + n + 1,
+                        staticClass: "betDiv",
+                        class: e.judgeThisBlankIsLatest(a.index) && e.judgeThisBlankIsLatest(a.index)[0] && e.isGame ? "hasWa" : "",
+                        on: {
+                            click: function(t) {
+                                return e.selBetNum(a, i)
+                            }
+                        }
+                    }, [a.isNotUser || a.isFoggy && (!e.judgeThisBlankIsLatest(a.index) || -1 != e.judgeThisBlankIsLatest(a.index)[1]) ? a.isFoggy ? e._e() : t("img", {
+                        staticClass: "bg",
+                        attrs: {
+                            src: "/images/guess_btn_system.png",
+                            alt: ""
+                        }
+                    }) : t("img", {
+                        staticClass: "bg",
+                        attrs: {
+                            src: "/images/guess_btn_noBoom.png",
+                            alt: ""
+                        }
+                    }), t("div", {
+                        staticClass: "innerData"
+                    }, [a.isFoggy ? e._e() : [a.isMine ? t("img", {
+                        staticClass: "pic_boom",
+                        attrs: {
+                            src: "/images/boom_v2.png?v=1",
+                            alt: ""
+                        }
+                    }) : e._e(), a.isMine ? t("img", {
+                        staticClass: "bg",
+                        attrs: {
+                            src: "/images/guess_btn_boom.png",
+                            alt: ""
+                        }
+                    }) : [e._m(0, !0), e.judgeThisBlankIsLatest(a.index) && e.judgeThisBlankIsLatest(a.index)[0] && e.isGame && e.gameConfig.myInfo.settleAmount ? t("p", {
+                        staticClass: "latestMulti"
+                    }, [e._v(" " + e._s(e.gameConfig.myInfo.currentMulti) + " ")]) : e._e()]]], 2)])
+                }
+                ))
+            }
+            ))], 2), t("div", {
+                staticClass: "ms_rule"
+            }, [t("div", {
+                staticClass: "l"
+            }, [t("img", {
+                staticClass: "icon",
+                attrs: {
+                    src: "/images/diamond_v2.png",
+                    alt: ""
+                }
+            }), t("span", {
+                staticClass: "txt"
+            }, [e._v(e._s(e.diamondNum))])]), e._m(1)])]) : e.isRD100NGame ? t("div", [t("div", {
+                staticClass: "rangeBox"
+            }, [t("div", {
+                staticClass: "__range-value"
+            }, [e._v(" " + e._s(e.rangeValue) + " ")]), t("mt-range", {
+                attrs: {
+                    min: 1,
+                    max: 99,
+                    "bar-height": 18
+                },
+                model: {
+                    value: e.rangeValue,
+                    callback: function(t) {
+                        e.rangeValue = t
+                    },
+                    expression: "rangeValue"
+                }
+            }), t("div", {
+                staticClass: "progress-val-wrap"
+            }, [t("span", {
+                staticClass: "progress-val",
+                staticStyle: {
+                    "text-align": "left"
+                }
+            }, [e._v("1")]), t("span", {
+                staticClass: "progress-val",
+                staticStyle: {
+                    color: "#fcd434"
+                },
+                on: {
+                    click: function(t) {
+                        e.rangeValue = 50
+                    }
+                }
+            }, [e._v("50")]), t("span", {
+                staticClass: "progress-val",
+                staticStyle: {
+                    "text-align": "right"
+                }
+            }, [e._v("100")])]), t("icon-svg", {
+                attrs: {
+                    iconClass: "explain"
+                },
+                nativeOn: {
+                    click: function(t) {
+                        return t.stopPropagation(),
+                        e.jumpRule.apply(null, arguments)
+                    }
+                }
+            })], 1), t("div", {
+                staticClass: "gtAndLt"
+            }, [t("div", {
+                staticClass: "lt",
+                class: "minus" === e.plusMinusValue ? "lt-active" : "",
+                on: {
+                    click: function(t) {
+                        return e.selLtGt("minus")
+                    }
+                }
+            }, [t("span", {
+                staticClass: "val1"
+            }, [e._v(e._s(e.$t("version23.lte")))]), t("span", {
+                staticClass: "val2"
+            }, [e._v(e._s(e._f("toFloor")(100 / e.rangeValue * e.gameConfig.info.expValue, 2)) + "x")])]), t("div", {
+                staticClass: "gt",
+                class: "plus" === e.plusMinusValue ? "gt-active" : "",
+                on: {
+                    click: function(t) {
+                        return e.selLtGt("plus")
+                    }
+                }
+            }, [t("span", {
+                staticClass: "val1"
+            }, [e._v(e._s(e.$t("version23.gt")))]), t("span", {
+                staticClass: "val2"
+            }, [e._v(e._s(e._f("toFloor")(100 / (100 - e.rangeValue) * e.gameConfig.info.expValue, 2)) + "x")])])])]) : e.isSDGame ? t("div", {
+                staticClass: "betPanel SD_betPanel"
+            }, e._l(e.gameConfig.info.options, (function(s, i) {
+                return t("div", {
+                    key: i,
+                    staticClass: "betDiv",
+                    class: s.isSel ? "sel" : "",
+                    on: {
+                        click: function(t) {
+                            return e.selBetNum(s, i)
+                        }
+                    }
+                }, [e.isChangeGameNow || !s.name.includes("1") && !s.name.includes("0") ? t("span", {
+                    staticClass: "label"
+                }, [e._v(e._s(s.name))]) : t("span", {
+                    staticClass: "SD_betNumStyle"
+                }, e._l(s.name.split(""), (function(e, s) {
+                    return t("b", {
+                        key: s,
+                        class: +e ? "redCircle" : "whiteCircle"
+                    })
+                }
+                )), 0), t("span", {
+                    staticClass: "num"
+                }, [e._v(e._s(s.multi) + "x")])])
+            }
+            )), 0) : t("div", {
+                staticClass: "betPanel",
+                class: e.isHLGame ? "HL_betPanel" : e.isKNGame ? "KN_betPanel" : e.isLK28Game || e.isTSGame || e.isFSTGame ? "LK28_betPanel" : ""
+            }, e._l(e.gameConfig.info.options, (function(s, i) {
+                return t("div", {
+                    key: i,
+                    staticClass: "betDiv",
+                    class: s.isSel ? "sel" : "",
+                    on: {
+                        click: function(t) {
+                            return e.selBetNum(s, i)
+                        }
+                    }
+                }, [t("span", {
+                    staticClass: "label"
+                }, [e._v(e._s(s.name))]), e.isKNGame ? ["9.755_0" == s.value ? t("span", {
+                    staticClass: "bt_range"
+                }, [e._v("210-695")]) : e._e(), "4.962_0" == s.value ? t("span", {
+                    staticClass: "bt_range"
+                }, [e._v("696-763")]) : e._e(), "2.5_1" == s.value ? t("span", {
+                    staticClass: "bt_range"
+                }, [e._v("764-856")]) : e._e(), "4.962_2" == s.value ? t("span", {
+                    staticClass: "bt_range"
+                }, [e._v("857-924")]) : e._e(), "9.755_1" == s.value ? t("span", {
+                    staticClass: "bt_range"
+                }, [e._v("925-1410")]) : e._e()] : e._e(), t("span", {
+                    staticClass: "num"
+                }, [e._v(e._s(s.multi) + "x")]), e.isHLGame && i > 2 ? [t("span", {
+                    staticClass: "lineBox"
+                }, [[0, 2, 4, 6, 8].includes(+s.name) ? t("b", {
+                    staticClass: "redLine line"
+                }) : e._e(), [1, 3, 5, 7, 9].includes(+s.name) ? t("b", {
+                    staticClass: "greenLine line"
+                }) : e._e(), [0, 5].includes(+s.name) ? t("b", {
+                    staticClass: "purpleLine line"
+                }) : e._e()])] : e._e(), "RULTI" == e.nowGame.gameName ? [t("span", {
+                    staticClass: "lineBox"
+                }, [0 == i ? t("b", {
+                    staticClass: "blackLine line"
+                }) : e._e(), 1 == i ? t("b", {
+                    staticClass: "redLine line"
+                }) : e._e(), 2 == i ? t("b", {
+                    staticClass: "blueLine line"
+                }) : e._e(), 3 == i ? t("b", {
+                    staticClass: "greenLine line"
+                }) : e._e()])] : e._e()], 2)
+            }
+            )), 0)], 2)], e.showHistory ? t("div", {
+                ref: "historyPanel",
+                staticClass: "scrollBox",
+                class: e.nowGame.subName + "_STYLE"
+            }, [t("div", {
+                staticClass: "content"
+            }, [t("div", {
+                staticClass: "thHeader"
+            }, [t("span", {
+                staticClass: "th_item NoSpan"
+            }, [e._v(e._s(e.$t("version3.issue")))]), e.nowGame.isLineBlockGame ? t("span", {
+                staticClass: "th_item heightSpan"
+            }, [e._v(e._s(e.$t("version3.blockHigh")))]) : e._e(), t("span", {
+                staticClass: "th_item timeSpan"
+            }, [e._v(e._s(e.nowGame.isLineBlockGame ? e.$t("version3.blockTime") : e.$t("pageTitle.time")))]), e.isCQKGame ? e.isCQKGame ? [t("span", {
+                staticClass: "th_item hashSpan"
+            }, [e._v(e._s(e.$t("version3.hash2")))])] : e._e() : t("span", {
+                staticClass: "th_item"
+            }, [e._v(e._s(e.$t("version8.result")))]), e.nowGame.isHasSymbol ? [e.isHLGame ? [t("span", {
+                staticClass: "th_item"
+            }, [e._v(e._s(e.$t("version8.color")))])] : t("span", {
+                staticClass: "th_item symbolParent"
+            }, [t("span", {
+                staticClass: "feture"
+            }, [e._v(e._s(e.$t("version22.flag")))]), t("icon-svg", {
+                attrs: {
+                    iconClass: "help"
+                }
+            })], 1)] : e._e(), t("symbolPop", {
+                directives: [{
+                    name: "show",
+                    rawName: "v-show",
+                    value: e.isShowSymbolDialog,
+                    expression: "isShowSymbolDialog"
+                }],
+                staticClass: "symbolDialog"
+            })], 2), t("div", {
+                ref: "scrollContent",
+                staticClass: "scrollContent"
+            }, [e._l(e.historyData, (function(s) {
+                return t("div", {
+                    staticClass: "issueItem"
+                }, [t("span", {
+                    staticClass: "NoSpan"
+                }, [e._v(e._s(s.issue.toString().substr(4)))]), e.nowGame.isLineBlockGame ? [t("span", {
+                    staticClass: "heightSpan"
+                }, [e._v(e._s(s.expand ? s.expand.height : "---"))]), t("span", {
+                    staticClass: "timeSpan"
+                }, [e._v(e._s(s.expand && s.expand.timestamp ? new Date(s.expand.timestamp).Format("hh:mm:ss") : "---"))])] : t("span", {
+                    staticClass: "timeSpan"
+                }, [e._v(e._s(+s.planDrawTime && s.planDrawTime.toString().length > 10 ? new Date(+s.planDrawTime).Format("hh:mm:ss") : "---"))]), t("span", {
+                    staticClass: "hashSpan",
+                    class: e.isKNGame ? "knStyle_hashSpan" : e.isQTGame ? "qtStyle_hashSpan" : e.isLotGame ? "lotStyle_hashSpan" : "",
+                    style: e.isRD100NGame ? s.value >= 1 && s.value <= 50 ? "color: #f2475c;" : "color: #3fb388;" : ""
+                }, [e.isSDGame ? [s.value ? e._l(s.value.split(""), (function(e, s) {
+                    return t("span", {
+                        key: s,
+                        staticClass: "circle",
+                        class: +e ? "redCircle_sd" : "whiteCircle_sd"
+                    })
+                }
+                )) : t("span", {
+                    staticStyle: {
+                        "text-align": "center"
+                    }
+                }, [e._v("---")])] : e.isFTGame ? [s.value ? e._l(s.value.split(","), (function(s, i) {
+                    return t("span", {
+                        key: i,
+                        staticClass: "square FT_Style",
+                        class: "FT_" + s + "Style"
+                    }, [e._v(e._s(s))])
+                }
+                )) : t("span", {
+                    staticStyle: {
+                        "text-align": "right"
+                    }
+                }, [e._v("---")])] : "RULTI" == e.nowGame.gameName ? [t("rulti_result", {
+                    attrs: {
+                        resultValue: s
+                    }
+                })] : e.isTWTLGame && s.resultFormatValueI18n && s.resultFormatValueI18n.S5M2 ? [t("twtl_result", {
+                    attrs: {
+                        resultValue: s.resultFormatValueI18n && s.resultFormatValueI18n.S5M2 && s.resultFormatValueI18n.S5M2[0]
+                    }
+                })] : "RB" == e.nowGame.gameName ? t("rb_result", {
+                    attrs: {
+                        resultValue: s.value
+                    }
+                }) : s.value && -1 != s.value.indexOf(",") ? [e.isLotGame ? t("span", {
+                    staticStyle: {
+                        "margin-right": "5px",
+                        color: "#f6ca29",
+                        "font-size": "12px"
+                    }
+                }, [e._v(" " + e._s(e.getSum(s.value)) + " ")]) : e._e(), e.isKNGame ? [t("span", {
+                    staticClass: "numBox"
+                }, [t("span", {
+                    staticStyle: {
+                        color: "#f6ca29",
+                        "font-size": "12px"
+                    }
+                }, [e._v(e._s(e.getSum(s.value)))]), e._l(s.value.split(","), (function(s, i) {
+                    return [i < 10 ? t("span", {
+                        staticStyle: {
+                            "margin-left": "4px",
+                            "font-size": "12px"
+                        }
+                    }, [e._v(e._s(s))]) : e._e()]
+                }
+                ))], 2), t("span", {
+                    staticClass: "numBox"
+                }, [e._l(s.value.split(","), (function(s, i) {
+                    return [i >= 10 ? t("span", {
+                        staticStyle: {
+                            "margin-left": "4px",
+                            "font-size": "12px"
+                        }
+                    }, [e._v(e._s(s))]) : e._e()]
+                }
+                ))], 2)] : e.isQTGame ? e._l(s.value.split(","), (function(s) {
+                    return t("img", {
+                        staticClass: "qt_img",
+                        attrs: {
+                            src: e.randomData_QT[s - 1],
+                            alt: ""
+                        }
+                    })
+                }
+                )) : e.isLK28Game || e.isTSGame ? [t("lk28_result", {
+                    attrs: {
+                        result: s.value
+                    }
+                })] : e.isFSTGame ? [t("fst_result", {
+                    attrs: {
+                        result: s.value
+                    }
+                })] : "RB" == e.nowGame.gameName ? [t("rb_result", {
+                    attrs: {
+                        resultValue: s.value
+                    }
+                })] : e._l(s.value.split(","), (function(s) {
+                    return t("span", {
+                        staticStyle: {
+                            "margin-left": "5px"
+                        }
+                    }, [e._v(e._s(s))])
+                }
+                ))] : [e._v(" " + e._s(s.value || "---") + " ")]], 2), e.nowGame.isHasSymbol ? t("span", {
+                    class: e.isHLGame ? "" : "expecialStyle",
+                    staticStyle: {
+                        display: "flex",
+                        "align-items": "center",
+                        "flex-direction": "row",
+                        "justify-content": "flex-end"
+                    }
+                }, [e.isHLGame ? [s.simpleResultFormatList.length ? e._l(s.simpleResultFormatList, (function(e) {
+                    return t("b", {
+                        class: e.color + "Circle"
+                    })
+                }
+                )) : t("span", [e._v("---")])] : e.nowGame.luckyWheelStruc ? [Object.keys(s.simpleResultFormatList).length ? [t("rlt_symbol", {
+                    attrs: {
+                        result: s.simpleResultFormatList
+                    }
+                })] : t("span", [e._v(" --- ")])] : [s.simpleResultFormatList.length ? e._l(s.simpleResultFormatList, (function(e) {
+                    return t("icon-svg", {
+                        staticStyle: {
+                            width: "20px",
+                            height: "20px",
+                            "margin-left": "3px"
+                        },
+                        attrs: {
+                            iconClass: e.resultSimpleAlias[0]
+                        }
+                    })
+                }
+                )) : t("span", [e._v(" --- ")])]], 2) : e._e()], 2)
+            }
+            )), 1 == e.scrollState ? t("mt-spinner", {
+                attrs: {
+                    type: "fading-circle",
+                    color: "#f0ac19",
+                    size: 20
+                }
+            }) : e.historyData.length ? t("span", {
+                staticClass: "allLoaded",
+                on: {
+                    click: function(t) {
+                        return e.$router.push({
+                            path: "/openHistory",
+                            query: {
+                                gameName: e.nowGame.gameName
+                            }
+                        })
+                    }
+                }
+            }, [e._v(e._s(e.$t("common.more")) + ">>")]) : e._e()], 2)])]) : e._e(), e.showHistory ? t("div", {
+                staticClass: "mask mask_history",
+                on: {
+                    click: e.closeMask
+                }
+            }) : e._e(), t("div", {
+                ref: "betOrder",
+                staticClass: "betOrder"
+            }, [t("p", {
+                staticClass: "balance-wrap"
+            }, [e._v(" " + e._s(e.$t("list.yue")) + "："), t("span", {
+                staticClass: "balance"
+            }, [e._v(e._s(e._f("toFloor")(e.gameConfig.balance, e.numberScale)) + " " + e._s(e.legalTender) + " ")]), t("icon-svg", {
+                class: e.isFresh ? "refreshing" : "",
+                attrs: {
+                    iconClass: "refreshIcon"
+                },
+                nativeOn: {
+                    click: function(t) {
+                        return e.refreshBalance.apply(null, arguments)
+                    }
+                }
+            })], 1), t("div", {
+                staticClass: "input-wrap"
+            }, [t("input", {
+                directives: [{
+                    name: "model",
+                    rawName: "v-model",
+                    value: e.betUnitMoney,
+                    expression: "betUnitMoney"
+                }],
+                staticClass: "input",
+                attrs: {
+                    type: "number",
+                    placeholder: e.$t("version3.betMoneyTip"),
+                    disabled: e.isDisableMoneyInputAndClear
+                },
+                domProps: {
+                    value: e.betUnitMoney
+                },
+                on: {
+                    input: [function(t) {
+                        t.target.composing || (e.betUnitMoney = t.target.value)
+                    }
+                    , e.getInput],
+                    blur: e.inputBlur
+                }
+            }), t("div", {
+                staticClass: "active",
+                on: {
+                    click: function(t) {
+                        e.betUnitMoney = e.toFloor(e.betUnitMoney / 3, e.numberScale)
+                    }
+                }
+            }, [e._v(" /3 ")]), t("div", {
+                staticClass: "active",
+                on: {
+                    click: function(t) {
+                        e.betUnitMoney = e.toFloor(3 * e.betUnitMoney, e.numberScale)
+                    }
+                }
+            }, [e._v(" x3 ")])]), t("span", {
+                staticClass: "betMoneyInfo"
+            }, [t("span", {
+                staticClass: "num"
+            }, [e._v(e._s(e.userBetNum))]), e._v(" x "), t("span", {
+                staticClass: "num"
+            }, [e._v(e._s(e.betUnitMoney ? e.betUnitMoney : "0"))]), e._v(" = "), t("span", {
+                staticClass: "num"
+            }, [e._v(e._s(e.totalBetUsdt))]), e._v(" " + e._s(e.legalTender) + " ")])]), t("div", {
+                ref: "betBtnBox",
+                staticClass: "betBtnBox"
+            }, [t("icon-svg", {
+                attrs: {
+                    iconClass: "delete"
+                },
+                nativeOn: {
+                    click: function(t) {
+                        return e.clearBetData.apply(null, arguments)
+                    }
+                }
+            }), t("div", {
+                staticClass: "betBtn",
+                class: e.isMaintain ? "maintainBtn" : e.nowGame.isGuessStruc && e.isGame ? "settleStyle" : "",
+                on: {
+                    click: e.confirmOrder
+                }
+            }, [e._v(" " + e._s(e.getBetBtnTxt) + " ")])], 1)], 2), t("div", {
+                staticClass: "hiloWinBox",
+                class: {
+                    resetHilo: 0 == e.hiloStep,
+                    hiloBoxEnter: 1 == e.hiloStep,
+                    hiloBoxFade: 2 == e.hiloStep
+                }
+            }, [6 == e.hiloResult ? t("img", {
+                attrs: {
+                    src: "/images/WIN02@2x.png",
+                    alt: ""
+                }
+            }) : t("img", {
+                attrs: {
+                    src: "/images/HILO_Lost.png?v=2",
+                    alt: ""
+                }
+            })]), !e.isWaitForResult && e.popupVisible ? t("custom-popup", {
+                staticClass: "confirmOrderBox",
+                attrs: {
+                    popupVisible: e.popupVisible,
+                    popupTitle: e.$t("version3.confirmOrder")
+                },
+                on: {
+                    "update:popupVisible": function(t) {
+                        e.popupVisible = t
+                    },
+                    "update:popup-visible": function(t) {
+                        e.popupVisible = t
+                    },
+                    cancel: function(t) {
+                        e.popupVisible = !1
+                    }
+                }
+            }, [t("template", {
+                slot: "content"
+            }, [t("div", [t("div", {
+                staticClass: "pContent"
+            }, [e.nowGame.isGuessStruc ? [t("p", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "label"
+            }, [e._v("* " + e._s(e.$t("version3.totalBetMoney")))]), t("span", {
+                staticClass: "num betMoney"
+            }, [e._v(e._s(e.totalBetUsdt) + " " + e._s(e.legalTender) + " ")])]), e.isGame ? t("p", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "label"
+            }, [e._v("* " + e._s(e.$t("version24.settleMoney")))]), t("span", {
+                staticClass: "num betMoney"
+            }, [e._v(" " + e._s(e.gameConfig.myInfo.currentMulti) + " x " + e._s(e.betUnitMoney) + " = " + e._s(e.calMSSettleMoney()) + " " + e._s(e.legalTender) + " ")])]) : e._e(), e.isGame ? e._e() : t("p", {
+                staticClass: "label",
+                staticStyle: {
+                    "text-align": "left",
+                    color: "#6b7485",
+                    "margin-top": "8px",
+                    "font-size": "12px"
+                }
+            }, [e._v(" * " + e._s(e.$t("gameBetOptionName.msTip")) + " ")])] : [e.nowGame.isCardGame ? e._e() : t("p", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "label"
+            }, [e._v("* " + e._s(e.$t("version3.issue")))]), t("span", {
+                staticClass: "num issueNo"
+            }, [e._v(e._s(e.curIssue))])]), e.nowGame.isTreeStruc || e.nowGame.lotStruc ? t("div", {
+                staticClass: "betBox_tree"
+            }, [e._l(e.treeGameBetData, (function(s, i) {
+                return [t("div", {
+                    staticClass: "bt_item"
+                }, [t("p", {
+                    staticClass: "pt"
+                }, [t("span", [e._v(e._s(e.$t("version24.playType")) + "：")]), t("span", [e._v(e._s(e.getBetName(i)))])]), t("p", {
+                    staticClass: "pB"
+                }, [t("span", [e._v(e._s(e.$t("version20.betNumber")) + "： ")]), t("ins", {
+                    staticStyle: {
+                        "text-align": "right",
+                        "max-width": "180px",
+                        "word-break": "break-word"
+                    }
+                }, [e._l(s, (function(s, i) {
+                    return [t("span", [e._v(e._s(s.name))])]
+                }
+                ))], 2)])])]
+            }
+            ))], 2) : t("p", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "label"
+            }, [e._v("* " + e._s(e.$t("version20.betNumber")))]), e.isRD100NGame ? e._e() : t("span", {
+                staticClass: "num"
+            }, [e.nowGame.isCardGame ? e._l(e.plusMinusValue, (function(s) {
+                return t("span", {
+                    staticStyle: {
+                        "margin-left": "5px"
+                    }
+                }, [e._v(e._s("lt" === s ? e.$t("version23.lt") : "eq" == s ? e.$t("version27.equal") : e.$t("version23.gt")) + e._s(e.hilo_userCard.card.name))])
+            }
+            )) : [e._l(e.orderData, (function(s, i) {
+                return ["FSLOT" == e.nowGame.gameName ? [t("fruitBetOption", {
+                    attrs: {
+                        betOptionItemData: [s.value, s.__value]
+                    }
+                })] : [t("span", {
+                    key: i,
+                    staticStyle: {
+                        "margin-left": "3px"
+                    }
+                }, [e._v(e._s(e.transName(s.name)))])]]
+            }
+            ))]], 2), e.isRD100NGame ? t("span", {
+                staticClass: "num"
+            }, [t("span", [e._v(e._s("minus" === e.plusMinusValue ? e.$t("version23.lte") : e.$t("version23.gt")) + e._s(e.rangeValue))])]) : e._e()]), t("p", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "label"
+            }, [e._v("* " + e._s(e.$t("version3.betMoneyTip")))]), t("span", {
+                staticClass: "num betMoney"
+            }, [e._v(e._s(e._f("toFloor")(e.betUnitMoney, e.numberScale)) + " " + e._s(e.legalTender))])]), t("p", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "label"
+            }, [e._v("* " + e._s(e.$t("version3.totalBetMoney")))]), t("span", {
+                staticClass: "num betMoney"
+            }, [e._v(e._s(e.totalBetUsdt) + " " + e._s(e.legalTender) + " ")])])]], 2)])]), t("template", {
+                slot: "footer"
+            }, [t("span", {
+                staticClass: "btn-submit",
+                on: {
+                    click: e.order
+                }
+            }, [e._v(e._s(e.$t("common.ok")))])])], 2) : e._e(), e.isShowMultiPlayReqResult ? t("custom-popup", {
+                staticClass: "confirmOrderBox",
+                attrs: {
+                    popupVisible: e.isShowMultiPlayReqResult,
+                    popupTitle: "Loading"
+                },
+                on: {
+                    "update:popupVisible": function(t) {
+                        e.isShowMultiPlayReqResult = t
+                    },
+                    "update:popup-visible": function(t) {
+                        e.isShowMultiPlayReqResult = t
+                    },
+                    cancel: function(t) {
+                        e.isShowMultiPlayReqResult = !1
+                    }
+                }
+            }, [t("template", {
+                slot: "content"
+            }, [t("div", [t("div", {
+                staticClass: "pContent"
+            }, [e.nowGame.isCardGame ? e._e() : t("p", {
+                staticClass: "item"
+            }, [t("span", {
+                staticClass: "label"
+            }, [e._v("* " + e._s(e.$t("version3.issue")))]), t("span", {
+                staticClass: "num issueNo"
+            }, [e._v(e._s(e.curIssue))])]), t("div", {
+                staticClass: "betBox_tree"
+            }, [e._l(e.promiseData, (function(s, i) {
+                return [t("div", {
+                    staticClass: "bt_item"
+                }, [t("p", {
+                    staticClass: "pt"
+                }, [t("span", [e._v(e._s(e.$t("version24.playType")) + "：")]), t("span", [e._v(e._s(e.getBetName(s.playType)))])]), t("p", {
+                    staticClass: "pB"
+                }, [t("span", [e._v(e._s(e.$t("version8.result")) + "： ")]), s.cb ? t("span", [e._v(" " + e._s(s.cb.msg) + " ")]) : t("mt-spinner", {
+                    attrs: {
+                        type: "fading-circle",
+                        color: "#f0ac19",
+                        size: 20
+                    }
+                })], 1)])]
+            }
+            ))], 2)])])]), t("template", {
+                slot: "footer"
+            }, [t("span", {
+                staticClass: "btn-submit",
+                on: {
+                    click: function(t) {
+                        e.isShowMultiPlayReqResult = !1
+                    }
+                }
+            }, [e._v(e._s(e.$t("common.ok")))])])], 2) : e._e()], 1)
+        }
+          , a = [function() {
+            var e = this
+              , t = e._self._c;
+            return t("p", [t("img", {
+                staticClass: "flagIcon",
+                attrs: {
+                    src: "/images/diamond_v2.png",
+                    alt: ""
+                }
+            })])
+        }
+        , function() {
+            var e = this
+              , t = e._self._c;
+            return t("div", {
+                staticClass: "r"
+            }, [t("img", {
+                staticClass: "icon",
+                attrs: {
+                    src: "/images/boom_v2.png",
+                    alt: ""
+                }
+            }), t("span", {
+                staticClass: "txt"
+            }, [e._v("5")])])
+        }
+        ]
+          , n = (s("13d5"),
+        s("95c8"))
+          , l = s("4128")
+          , o = s.n(l);
+        const r = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"]
+          , u = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+          , m = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          , c = ["01", "02", "03", "04", "05", "06", "07", "08", "09", 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 62, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80]
+          , h = ["01", "02", "03", "04", "05", "06", "07", "08", "09", 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 62, 62, 63, 64, 65, 66, 67, 68, 69]
+          , d = ["01", "02", "03", "04", "05", "06", "07", "08", "09", 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+          , g = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]
+          , p = [0, 1];
+        let C, _, f = 0, v = 0, y = 5;
+        var S = {
+            components: {
+                symbolPop: n["a"],
+                Range: () => s.e("chunk-d602ecdc").then(s.bind(null, "8bd4")),
+                rlt_symbol: () => s.e("chunk-04705ecd").then(s.bind(null, "3758")),
+                lk28_result: () => s.e("chunk-6b282bef").then(s.bind(null, "a423")),
+                fst_result: () => s.e("chunk-24894b67").then(s.bind(null, "4878")),
+                fslot: () => s.e("chunk-34592774").then(s.bind(null, "56bd")),
+                fruitBetOption: () => s.e("chunk-1e8f154a").then(s.bind(null, "8fdd")),
+                rulti: () => s.e("chunk-12a2131e").then(s.bind(null, "ef83")),
+                rulti_result: () => s.e("chunk-4ccd471c").then(s.bind(null, "4dcc")),
+                rb_result: () => s.e("chunk-701646da").then(s.bind(null, "af57")),
+                twtl_result: () => s.e("chunk-43032301").then(s.bind(null, "54d2")),
+                RB: () => s.e("chunk-33c83101").then(s.bind(null, "5c89"))
+            },
+            data() {
+                return {
+                    rangeValue: 50,
+                    plusMinusValue: "",
+                    isRequestingConfig: !1,
+                    betUnitMoney: "",
+                    isFresh: !1,
+                    scrollState: 1,
+                    startIndex: 1,
+                    pageSize: 30,
+                    historyData: [],
+                    showHistory: !1,
+                    userBalance: {},
+                    popupVisible: !1,
+                    isShowMultiPlayReqResult: !1,
+                    filterType: "up",
+                    isDoBetNow: !1,
+                    promiseData: [],
+                    canBet: !0,
+                    timeBar: null,
+                    lastIssueHash: "",
+                    nowIssue: "",
+                    totalIssue: "",
+                    lastIssue: "",
+                    betConfig: {
+                        lastIssueResult: [],
+                        lastIssueNo: ""
+                    },
+                    minPerBetAmount: "",
+                    maxPerBetAmount: "",
+                    isTenSecond: "",
+                    gameSt: "",
+                    nowGameData: "",
+                    inv: null,
+                    hlResMap: {
+                        Z: "purpleCircle",
+                        H: "redCircle",
+                        L: "greenCircle"
+                    },
+                    hl5mResMap: {
+                        "5_0": "purpleCircle",
+                        "2_1": "greenCircle",
+                        "2_0": "redCircle"
+                    },
+                    isChangeGameNow: !1,
+                    isShowAward_hide: !1,
+                    isHasWrong: !1,
+                    historySize: 20,
+                    mockTimeStart: 60,
+                    mockInv: null,
+                    diff: null,
+                    inv_timeBar: null,
+                    _60S: 0,
+                    curOrderData: {},
+                    isShowSymbolDialog: !1,
+                    mockInput: null,
+                    isGame: !1,
+                    currentIssue: null,
+                    orderDetail: "",
+                    diamondNum: 20,
+                    hilo_userCard: null,
+                    hilo_systemCard: null,
+                    hilo_systemCard_copy: null,
+                    orderNo: null,
+                    randomData_QT: [s("d6eb"), s("4286"), s("35d5"), s("64a1"), s("b4db"), s("35e1")],
+                    lastAngle: 0,
+                    rltOpenNumBgMap: {
+                        "2_4": "rlt_red_bg",
+                        "2_5": "rlt_black_bg",
+                        "36_0": "rlt_green_bg"
+                    },
+                    excuteSendCard_system: !1,
+                    excuteSendCard_user: !1,
+                    excuteRotateCard: !1,
+                    isShowCard: !1,
+                    hiloStep: 0,
+                    isMoveCardAfterOpen: !1,
+                    isThrowCard: !1,
+                    isAnimateTime: "HILO" == this.$route.query.gameName,
+                    hiloResult: null
+                }
+            },
+            methods: {
+                start() {
+                    this.$refs.rulti && this.$refs.rulti.startRun()
+                },
+                rultiAniEnd() {
+                    this.historyData.length && this.historyData[0].issue != this.gameConfig.lastIssue.issue && this.historyData.unshift({
+                        value: this.gameConfig.lastIssue.resultVal.value
+                    }),
+                    this.getCurRoundBetOrder()
+                },
+                fsAniEnd() {
+                    this.getCQKConfig(),
+                    this.getNewBalance(),
+                    this.hiloStep = 0;
+                    let e = setTimeout( () => {
+                        this.doHiloWinEffect( () => {
+                            this.isAnimateTime = !1
+                        }
+                        )
+                    }
+                    , 1e3);
+                    this.$once("hook:beforeDestroy", () => {
+                        clearTimeout(e)
+                    }
+                    )
+                },
+                getSum(e) {
+                    let t = e.split(",");
+                    return t.reduce( (e, t) => e + +t, 0)
+                },
+                transName(e) {
+                    var t, s;
+                    return (null === (t = this.SD_betOptionMap) || void 0 === t ? void 0 : t[e]) && this.$t(null === (s = this.SD_betOptionMap) || void 0 === s ? void 0 : s[e]) || e
+                },
+                setActivePath(e, t) {
+                    this.$store.commit("setActivePath", {
+                        dataItem: e,
+                        index: t
+                    })
+                },
+                calBetDataNum() {
+                    if (this.nowGame.isTreeStruc || this.nowGame.lotStruc) {
+                        let e = [];
+                        for (let t in this.treeGameBetData)
+                            this.treeGameBetData[t] && (e = e.concat(this.treeGameBetData[t]));
+                        return e
+                    }
+                    return this.gameConfig.info.options.filter(e => e.isSel)
+                },
+                changePlayMode(e, t) {
+                    for (var s in t)
+                        t[s].isSel = t[s].value == e.value;
+                    this.$store.commit("setTopMode", e),
+                    this.$nextTick( () => {
+                        let t;
+                        for (var s in e.options)
+                            e.options[s].isSel && (t = e.options[s]);
+                        if (this.$refs.modeItem && this.$refs.modeItem.length)
+                            for (let e = 0; e < this.$refs.modeItem.length; e++) {
+                                var i = this.$refs.modeItem[e].id;
+                                if (i == t.value) {
+                                    this.$refs.topTab[0].scrollLeft = this.$refs.modeItem[e].offsetLeft - 16;
+                                    break
+                                }
+                            }
+                    }
+                    )
+                },
+                changeSecondMode(e, t, s) {
+                    for (var i in t)
+                        t[i].isSel = t[i].value == e.value;
+                    this.$store.commit("setSecondMode", {
+                        topItem: s,
+                        secondItem: e
+                    })
+                },
+                selLtGt(e) {
+                    this.plusMinusValue = e
+                },
+                getResultImg(e) {
+                    let t = "";
+                    try {
+                        t = s("31e8")(`./${e}.svg`)
+                    } catch (i) {}
+                    return t
+                },
+                handleClick(e) {
+                    var t = this
+                      , s = document.getElementById("award_hide")
+                      , i = event.target || event.srcElement;
+                    s == i || s.contains(i) ? t.isShowAward_hide = !t.isShowAward_hide : t.isShowAward_hide = !1
+                },
+                getRuleTxt() {
+                    let e;
+                    if (/^BLK/.test(this.gameConfig.info.gameName)) {
+                        if (/TM|MC/.test(this.gameConfig.info.gameName)) {
+                            let t = /TM/.test(this.gameConfig.info.gameName) ? 10 : this.gameConfig.info.gameName.match(/\d/)[0];
+                            return e = this.$t("version3.betTip").replace(/10/, t),
+                            e
+                        }
+                        return e = this.$t("version3.betTip2"),
+                        e
+                    }
+                    if (/^RG/.test(this.gameConfig.info.gameName)) {
+                        if (/TM|MC/.test(this.gameConfig.info.gameName)) {
+                            let t = /TM/.test(this.gameConfig.info.gameName) ? 10 : this.gameConfig.info.gameName.match(/\d/)[0];
+                            return e = this.$t("version12.hl10mRule").replace(/10/, t),
+                            e
+                        }
+                        return e = this.$t("version8.hlRule"),
+                        e
+                    }
+                    if (/^DS/.test(this.gameConfig.info.gameName)) {
+                        if (/TM|MC/.test(this.gameConfig.info.gameName)) {
+                            let t = /TM/.test(this.gameConfig.info.gameName) ? 10 : this.gameConfig.info.gameName.match(/\d/)[0];
+                            return e = this.$t("version12.sd10mRule").replace(/10/, t),
+                            e
+                        }
+                        return e = this.$t("version9.SD1MRule"),
+                        e
+                    }
+                    return this.isRD100NGame ? this.$t("version23.oneHundred") : this.$t(`gameBetOptionName.${this.nowGame.subName}_rule`)
+                },
+                jumpRule() {
+                    this.$router.push({
+                        path: "/helpDetail",
+                        query: {
+                            id: this.$store.state.gameInfo.find(e => e.gameName == this.nowGame.gameName).documentId
+                        }
+                    })
+                },
+                closeMask() {
+                    this.showHistory = !1,
+                    this.util.browser.forbiddenBtmScroll(!1)
+                },
+                initData() {
+                    y = "LOTW3" == this.nowGame.gameName ? 30 : this.isTenGame ? 5 : 3
+                },
+                clearUserBet() {
+                    this.$store.commit("clearUserBet")
+                },
+                async getNewBalance() {
+                    let e = await ( () => new Promise(e => {
+                        e(this.$api(this.api.uc.wallet + "USDT", {}, "GET"))
+                    }
+                    ))();
+                    200 == e.code && (this.gameConfig.balance = e.data.balance)
+                },
+                calMSSettleMoney() {
+                    return this.gameConfig.myInfo.settleAmount ? this.gameConfig.myInfo.settleAmount : new o.a(this.gameConfig.myInfo.currentMulti).mul(new o.a(this.betUnitMoney))
+                },
+                calTWTLRebateValue(e) {
+                    let t = new o.a(this.gameConfig.info.expValue).mul(new o.a(e));
+                    return this.toFloor(t, 2)
+                },
+                getCQKConfig(e, t=!1) {
+                    if (!this.isRequestingConfig) {
+                        var s = this.nowGame.gameName;
+                        this.isRequestingConfig = !0,
+                        this.$api(this.api.game.getSimpleGameConfig, {
+                            gameName: this.gameConfig.info.gameName
+                        }, "GET").then(i => {
+                            if (this.isRequestingConfig = !1,
+                            200 == i.code) {
+                                var a, n;
+                                this._60S = 0;
+                                for (let e in i.data)
+                                    null === i.data[e] && delete i.data[e];
+                                if (null !== (a = i.data) && void 0 !== a && a.myInfo) {
+                                    for (let e in i.data.myInfo)
+                                        null === i.data.myInfo[e] && delete i.data.myInfo[e];
+                                    this.currentIssue = i.data.myInfo.currentIssue
+                                }
+                                this.$store.commit("setGameConfig", i.data);
+                                var l = this;
+                                if (s != this.gameConfig.info.gameName)
+                                    return void console.log("Not the same game");
+                                var o = document.querySelectorAll(this.isSDGame ? ".circle" : ".openNum");
+                                if (o.length || this.$refs.rulti || this.$refs.RB)
+                                    if (i.data.lastIssue.resultVal && i.data.lastIssue.resultVal.value) {
+                                        var r;
+                                        v = 0,
+                                        l.lastIssueHash = this.isTWTLGame ? null === (r = i.data.lastIssue.resultVal) || void 0 === r || null === (r = r.resultFormatValueI18n) || void 0 === r ? void 0 : r.S5M2[0] : i.data.lastIssue.resultVal.value,
+                                        f = 0;
+                                        var u = this.isTWTLGame ? l.lastIssueHash.split(" ") : l.lastIssueHash.split(-1 != l.lastIssueHash.indexOf(",") ? "," : "");
+                                        setTimeout( () => {
+                                            this.clearAllInterval(),
+                                            this.openAnimation(o, u, "stop", t)
+                                        }
+                                        , e ? 0 : 1500)
+                                    } else
+                                        C || (window.isHide ? (console.log("不执行开奖动画"),
+                                        this.clearAllInterval()) : (C = window.setInterval( () => {
+                                            this.openAnimation(o, "", "move")
+                                        }
+                                        , 100),
+                                        this.$once("hook:beforeDestroy", () => {
+                                            window.clearInterval(C),
+                                            C = null
+                                        }
+                                        )));
+                                "" !== (null !== (n = i.data.nextIssue) && void 0 !== n ? n : "") && (-2 == i.data.nextIssue.status ? (l.timeBar = "Maintain",
+                                l.gameSt = i.data.nextIssue.status) : 1 == i.data.nextIssue.status ? l.gameSt = i.data.nextIssue.status : 0 == i.data.nextIssue.status && (l.gameSt = i.data.nextIssue.status,
+                                setTimeout( () => {
+                                    this.$router.push("/")
+                                }
+                                , 1500)))
+                            } else
+                                i.msg && this.toast(i.msg)
+                        }
+                        )
+                    }
+                },
+                getGuessTimeBar(e) {
+                    this.isChangeGameNow || (this.diff = e - ((new Date).getTime() - this.diff_server),
+                    this.diff > 0 && (this.timeBar = this.util.transStampToCountDown(this.diff)),
+                    this.diff <= 0 && (clearInterval(this.inv_timeBar),
+                    this.inv_timeBar = null))
+                },
+                getTimeBar() {
+                    if (!this.isChangeGameNow) {
+                        if (this.diff = this.gameConfig.currentIssue.issueEndTime - ((new Date).getTime() - this.diff_server),
+                        this.diff > 0 && (this.timeBar = this.util.transStampToCountDown(this.diff),
+                        v % y != 0 || this.gameConfig.lastIssue.resultVal && this.gameConfig.lastIssue.resultVal.value || 0 == v || this.getCQKConfig(),
+                        v++),
+                        this.gameConfig.currentIssue.issueCloseTime && (new Date).getTime() - this.diff_server >= this.gameConfig.currentIssue.issueCloseTime ? this.canBet = !1 : this.canBet = !0,
+                        this.diff <= 1e3 && !C) {
+                            var e = document.querySelectorAll(this.isSDGame ? ".circle" : ".openNum");
+                            0 != f || this.nowGame.isExcuteAniUntilOpen || (f = 1,
+                            window.isHide ? this.clearAllInterval() : (C = window.setInterval( () => {
+                                this.openAnimation(e, "", "move")
+                            }
+                            , 100),
+                            this.$once("hook:beforeDestroy", () => {
+                                clearInterval(C),
+                                C = null
+                            }
+                            )))
+                        }
+                        this.diff <= 0 && (this._60S || (this._60S = 60 * this.nowGame.time * 1e3),
+                        this._60S -= 1e3,
+                        this.timeBar = this.util.transStampToCountDown(this._60S),
+                        this.canBet = !0,
+                        this.getCQKConfig())
+                    }
+                },
+                getCurRoundBetOrder() {},
+                setPlayerIsGame() {
+                    this.isGame = !0,
+                    this.util.setStore({
+                        name: "isCurRoundBet",
+                        content: this.curIssue + this.nowGame.gameName,
+                        type: "session"
+                    })
+                },
+                getInput(e) {
+                    this.betUnitMoney = e.target.value.replace(/\D+\./g, "")
+                },
+                inputBlur(e) {
+                    this.betUnitMoney = +e.target.value
+                },
+                createCardData(e) {
+                    let t = {};
+                    if (e.expand) {
+                        let s = JSON.parse(e.expand);
+                        if (s.resultValue) {
+                            let e = s.resultValue;
+                            t = {
+                                name: e.slice(1),
+                                suit: e[0].slice(0, 1)
+                            }
+                        }
+                    }
+                    return t
+                },
+                sleep(e) {
+                    return console.log((new Date).getTime(), "间隔发送请求"),
+                    new Promise(t => setTimeout(t, e))
+                },
+                async promiseAllInterval(e, t) {
+                    const s = [];
+                    for (const n of e) {
+                        var i;
+                        try {
+                            i = await n.func(),
+                            console.log(i, "__result")
+                        } catch (a) {
+                            console.log(a, a.response, "eeeee"),
+                            i = a && a.response && a.response.data ? a.response.data : null
+                        }
+                        s.push(i),
+                        n.cb = i,
+                        await this.sleep(t)
+                    }
+                    return s
+                },
+                async doMockPromiseAll() {
+                    this.isShowMultiPlayReqResult = !0;
+                    await this.promiseAllInterval(this.promiseData, 500);
+                    this.cancelLoading(),
+                    this.getNewBalance(),
+                    this.isTWTLGame || this.clearBetData(),
+                    this.isDoBetNow = !1,
+                    this.popupVisible = !1,
+                    setTimeout( () => {
+                        this.isShowMultiPlayReqResult = !1,
+                        this.promiseData = []
+                    }
+                    , 1500)
+                },
+                setResultAniData(e, t) {
+                    var s;
+                    let i = this.isTWTLGame ? null === (s = e.lastIssue.resultVal) || void 0 === s || null === (s = s.resultFormatValueI18n) || void 0 === s ? void 0 : s.S5M2[0] : this.gameConfig.lastIssue.resultVal.value;
+                    if (console.log(i, "sdfsfd"),
+                    this.isTWTLGame)
+                        this.openAnimation(t, i.split(" "), "stop", !0);
+                    else {
+                        var a = i ? i.split(-1 != i.indexOf(",") ? "," : "") : "";
+                        console.log("a", a),
+                        this.openAnimation(t, a, "stop", !0)
+                    }
+                },
+                order() {
+                    if (this.isDoBetNow)
+                        return;
+                    this.popupVisible = !1;
+                    let e = []
+                      , t = ""
+                      , s = this.isRD100NGame || this.nowGame.isGuessStruc || this.isTWTLGame ? 1 : this.userBetNum;
+                    t = this.toFloor(new o.a(s).mul(new o.a(this.betUnitMoney)), this.numberScale);
+                    let i = {};
+                    if (this.nowGame.isCardGame) {
+                        let t = {
+                            lt: "<",
+                            eq: "=",
+                            gt: ">"
+                        };
+                        this.plusMinusValue.forEach( (s, i) => {
+                            e += `${i ? "," : ""}${t[s]}${this.hilo_userCard.card.suit}${this.hilo_userCard.card.name}`,
+                            e = this.util.escapeHTML(e)
+                        }
+                        )
+                    } else if (this.nowGame.isGuessStruc)
+                        e = "";
+                    else if (this.nowGame.isTreeStruc || this.nowGame.lotStruc) {
+                        for (var a in this.nowGame.betPanelObj) {
+                            let e = a.split("-")
+                              , t = e[1]
+                              , s = e[0]
+                              , n = /\//.test(s) ? s.split("/")[0] : s
+                              , l = this.nowGame.betPanelObj[a];
+                            i[n] || (i[n] = []);
+                            let o = l.map(e => e.isSel ? e.value : "");
+                            i[n][t] = o
+                        }
+                        for (var a in i) {
+                            let e = i[a].find(e => e.join(""));
+                            e ? i[a] = i[a].join("-") : delete i[a]
+                        }
+                    } else
+                        "RD100N" !== this.gameConfig.info.subServiceCode ? e = ( () => {
+                            let e = [];
+                            return this.gameConfig.info.options.forEach( (t, s) => {
+                                e.push(t.isSel ? this.gameConfig.info.options[s].value : "")
+                            }
+                            ),
+                            e.join(",")
+                        }
+                        )() : this.isRD100NGame && (e = "minus" === this.plusMinusValue ? "-" + this.rangeValue : this.rangeValue);
+                    if (this.nowGame.isTreeStruc || this.nowGame.lotStruc) {
+                        let e = [];
+                        for (var a in i) {
+                            console.log(i, "promise duoge ");
+                            let s = {
+                                frontTime: (new Date).getTime() - this.diff_server,
+                                serviceCode: this.gameConfig.info.serviceCode,
+                                subServiceCode: this.gameConfig.info.subServiceCode,
+                                issue: this.curOrderData.currentIssue.issue,
+                                orderAmount: this.isTWTLGame ? t : this.toFloor(new o.a(this.eachTopModeBetNum[a].length).mul(new o.a(this.betUnitMoney)), this.numberScale),
+                                playType: a,
+                                orderAmountDetail: this.toFloor(this.betUnitMoney, this.numberScale),
+                                orderDetail: this.mockInput || i[a]
+                            }
+                              , n = () => new Promise( (e, t) => {
+                                e(this.$api(this.api.game.addOrder, s))
+                            }
+                            );
+                            e.push(n),
+                            this.promiseData.push({
+                                playType: a,
+                                func: n,
+                                success: !1,
+                                msg: null,
+                                cb: null
+                            })
+                        }
+                        this.isDoBetNow = !0,
+                        this.loading(),
+                        this.doMockPromiseAll()
+                    } else if (this.isDoBetNow = !0,
+                    this.loading(),
+                    this.nowGame.isGuessStruc && this.isGame) {
+                        let e = {
+                            subServiceCode: this.gameConfig.info.subServiceCode,
+                            frontTime: (new Date).getTime() - this.diff_server,
+                            serviceCode: this.gameConfig.info.serviceCode,
+                            issue: this.currentIssue,
+                            orderAmount: t,
+                            orderAmountDetail: t,
+                            orderDetail: "",
+                            orderNo: this.orderNo
+                        };
+                        this.$api(this.api.game.planGameEnd, e).then(e => {
+                            this.cancelLoading(),
+                            this.isDoBetNow = !1,
+                            this.popupVisible = !1,
+                            200 == e.code ? (this.isGame = !1,
+                            this.getCQKConfig(),
+                            this.getNewBalance(),
+                            this.inv_timeBar && (clearInterval(this.inv_timeBar),
+                            this.inv_timeBar = null,
+                            this.timeBar = "00:00:00"),
+                            this.toast(e.msg ? e.msg : this.$t("version24.settleSuccess")),
+                            this.playWinEffect(!0)) : e.msg && this.toast(e.msg)
+                        }
+                        ).finally( () => {
+                            this.isDoBetNow = !1,
+                            this.isGame = !1
+                        }
+                        )
+                    } else {
+                        let s = {
+                            frontTime: (new Date).getTime() - this.diff_server,
+                            serviceCode: this.gameConfig.info.serviceCode,
+                            subServiceCode: this.gameConfig.info.subServiceCode,
+                            orderAmount: t,
+                            orderAmountDetail: this.toFloor(this.betUnitMoney, this.numberScale),
+                            orderDetail: this.mockInput || e || ""
+                        };
+                        "FSLOT" == this.nowGame.gameName && (s.expand = JSON.stringify({
+                            FSLOT: {
+                                count: ( () => {
+                                    let e = [];
+                                    return this.gameConfig.info.options.forEach( (t, s) => {
+                                        e.push(t.isSel ? this.gameConfig.info.options[s].__value : "")
+                                    }
+                                    ),
+                                    e.join(",")
+                                }
+                                )()
+                            }
+                        })),
+                        this.nowGame.isGuessStruc ? (s.issue = this.currentIssue,
+                        s.expand = JSON.stringify({
+                            MS: {
+                                mines: 5
+                            }
+                        })) : s.issue = this.curIssue,
+                        this.$api(this.api.game.addOrder, s).then(e => {
+                            if (this.cancelLoading(),
+                            this.isDoBetNow = !1,
+                            this.popupVisible = !1,
+                            e && 200 == e.code)
+                                if (this.setPlayerIsGame(),
+                                this.diamondNum = 20,
+                                this.orderNo = e.data.orderNo,
+                                this.currentIssue = e.data.issue,
+                                this.nowGame.isHasAnimation || this.getNewBalance(),
+                                this.nowGame.isCardGame) {
+                                    if (this.hilo_systemCard_copy = this.createCardData(e.data),
+                                    e.data.expand) {
+                                        let t = JSON.parse(e.data.expand);
+                                        this.hiloResult = t.orderStatus,
+                                        this.$refs.open_systemCard.addEventListener("animationend", this.openSystemCardCb),
+                                        this.$once("hook:beforeDestroy", () => {
+                                            this.$refs.open_systemCard.removeEventListener("animationend", this.openSystemCardCb)
+                                        }
+                                        ),
+                                        this.isAnimateTime = !0,
+                                        this.hiloStep = 0;
+                                        let s = setTimeout( () => {
+                                            this.doHiloWinEffect( () => {
+                                                this.startNextRound()
+                                            }
+                                            )
+                                        }
+                                        , 1e3);
+                                        this.$once("hook:beforeDestroy", () => {
+                                            clearTimeout(s)
+                                        }
+                                        )
+                                    }
+                                } else if ("FSLOT" == this.nowGame.gameName) {
+                                    if (e.data.expand) {
+                                        let t = JSON.parse(e.data.expand);
+                                        this.hiloResult = t.orderStatus,
+                                        this.$refs.fslot && (this.isAnimateTime = !0,
+                                        this.$refs.fslot.startCallback(t))
+                                    }
+                                } else
+                                    this.nowGame.isGuessStruc ? (this.orderDetail = "",
+                                    this.clearUserBet(),
+                                    this.getGuessTimeBar(e.data.startSettleTime),
+                                    this.inv_timeBar = setInterval( () => {
+                                        this.getGuessTimeBar(e.data.startSettleTime)
+                                    }
+                                    , 1e3),
+                                    this.$once("hook:beforeDestroy", () => {
+                                        window.clearInterval(this.inv_timeBar),
+                                        this.inv_timeBar = null
+                                    }
+                                    )) : this.clearBetData();
+                            else
+                                500 == e.code && this.clearBetData();
+                            e.msg && this.toast(e.msg)
+                        }
+                        ).finally( () => {
+                            this.isDoBetNow = !1
+                        }
+                        )
+                    }
+                },
+                playWinEffect(e) {
+                    this.hiloResult = e ? 6 : 7,
+                    this.doHiloWinEffect(null),
+                    this.hiloStep = 0,
+                    this.isGame = !1
+                },
+                doHiloWinEffect(e) {
+                    let t = setTimeout( () => {
+                        this.hiloStep++,
+                        2 == this.hiloStep ? (e && e(),
+                        clearTimeout(t)) : this.doHiloWinEffect(e)
+                    }
+                    , 1 == this.hiloStep ? 2e3 : 1e3);
+                    this.$once("hook:beforeDestroy", () => {
+                        clearTimeout(t)
+                    }
+                    )
+                },
+                confirmOrder() {
+                    if (!this.isMaintain)
+                        if (this.nowGame.isGuessStruc && this.isGame)
+                            this.popupVisible = !0;
+                        else {
+                            if (this.isRD100NGame) {
+                                if (!this.plusMinusValue)
+                                    return void this.toast(this.$t("version3.chooseBetNumTip"));
+                                if (100 / (100 - this.rangeValue) * this.gameConfig.info.expValue < 1 && "plus" == this.plusMinusValue || 100 / this.rangeValue * this.gameConfig.info.expValue < 1 && "minus" == this.plusMinusValue)
+                                    return void this.toast(this.$t("version23.oddsToLowTip"))
+                            }
+                            if (this.nowGame.isCardGame) {
+                                if (!this.plusMinusValue || 0 == this.plusMinusValue.length)
+                                    return void this.toast(this.$t("version3.chooseBetNumTip"));
+                                if (this.plusMinusValue.length > 2)
+                                    return void this.toast(this.$t("version28.maxTwoOption"))
+                            }
+                            if ("FSLOT" == this.nowGame.gameName && !this.orderData.length)
+                                return void this.toast(this.$t("version3.chooseBetNumTip"));
+                            if (this.nowGame.time) {
+                                if ((new Date).getTime() - this.diff_server >= this.gameConfig.currentIssue.issueCloseTime)
+                                    return void this.toast(this.$t("version22.stopBet"));
+                                if (this.orderData.length <= 0 && "RD100N" !== this.gameConfig.info.gameName)
+                                    return void this.toast(this.$t("version3.chooseBetNumTip"));
+                                if (this.orderData.length > 25)
+                                    return void this.toast(this.$t("version25.overMaxBetNum"));
+                                if (this.isFTGame && this.eachTopModeBetNum.P) {
+                                    let e = this.eachTopModeBetNum.P.length;
+                                    if (e > 39)
+                                        return void this.toast(this.$t("gameBetOptionName.overMaxBetLimit"))
+                                }
+                                if (this.isTWTLGame && this.eachTopModeBetNum.S5M2.length && 5 != this.eachTopModeBetNum.S5M2.length)
+                                    return void this.toast(this.$t("version30.t14"));
+                                if (this.isTWTLGame && this.eachTopModeBetNum.S5T12.length && (this.eachTopModeBetNum.S5T12.length < 5 || this.eachTopModeBetNum.S5T12.length > 12))
+                                    return void this.toast(this.$t("version30.t15"))
+                            }
+                            if (!this.judgeBetMoney())
+                                return;
+                            this.curOrderData = {
+                                ...this.gameConfig
+                            },
+                            this.popupVisible = !0
+                        }
+                },
+                clearBetData() {
+                    this.nowGame.isGuessStruc ? this.isGame || (this.orderDetail = "",
+                    this.betUnitMoney = "",
+                    this.clearUserBet()) : "RD100N" == this.gameConfig.info.gameName ? this.betUnitMoney = "" : (this.betUnitMoney = "",
+                    this.clearUserBet())
+                },
+                refreshBalance() {
+                    this.isFresh = !0,
+                    this.getNewBalance(),
+                    setTimeout( () => {
+                        this.isFresh = !1
+                    }
+                    , 1500)
+                },
+                getHistory() {
+                    this.scrollState = 1,
+                    this.$api(this.api.game.getGameHistory, {
+                        subServiceCode: this.gameConfig.info.subServiceCode,
+                        issue: this.gameConfig.currentIssue.issue,
+                        size: this.historySize
+                    }, "GET").then(e => {
+                        200 == e.code ? (/BLK/.test(this.gameConfig.info.gameName) && e.data.records.forEach(e => {
+                            e.value && (e.value = e.value.replace(/(\w{2})\w+(\w{4})/g, "$1...$2"))
+                        }
+                        ),
+                        this.historyData = this.historyData.concat(e.data.records),
+                        this.scrollState = "") : e.msg && this.toast(e.msg)
+                    }
+                    )
+                },
+                getOrderHistroy() {
+                    this.$api(this.api.game.getGameRecord, {
+                        subServiceCode: this.nowGame.gameName,
+                        current: 1,
+                        size: 10,
+                        isPageNum: !1,
+                        serviceCode: "G"
+                    }, "GET").then(e => {
+                        this.hasGetData = !1,
+                        200 == e.code ? (e.data.records.forEach(e => {
+                            e.card = this.createCardData(e)
+                        }
+                        ),
+                        this.historyData = e.data.records,
+                        e.data.records.length < 10 ? this.scrollState = 3 : this.scrollState = 2) : e.msg && this.toast(e.msg)
+                    }
+                    )
+                },
+                showHistoryPanel() {
+                    if (this.showHistory = !this.showHistory,
+                    this.showHistory && this.$nextTick( () => {
+                        let e = document.querySelector(".cHeader").scrollHeight;
+                        this.$refs.historyPanel.style.top = e + this.$refs.issueWrap.scrollHeight + "px"
+                    }
+                    ),
+                    this.historyData = [],
+                    this.startIndex = 1,
+                    this.scrollState = 1,
+                    this.showHistory) {} else
+                        this.util.browser.forbiddenBtmScroll(!1);
+                    this.$nextTick( () => {
+                        this.nowGame.isHasSymbol && document.addEventListener("touchend", this.documentClick)
+                    }
+                    ),
+                    this.getHistory()
+                },
+                transMulti(e) {
+                    let t = /^TWLT/.test(this.nowGame.gameName) ? [8.166, 49] : /^SPLT/.test(this.nowGame.gameName) ? [6.3333, 8] : [13.8, 26];
+                    return "RED" == e ? new o.a(t[1]).mul(new o.a(this.gameConfig.info.expValue)) : new o.a(t[0]).mul(new o.a(this.gameConfig.info.expValue))
+                },
+                startInterval(e, t=100) {
+                    e && e(),
+                    _ && clearTimeout(_),
+                    _ = setTimeout( () => {
+                        this.startInterval(e, t)
+                    }
+                    , t)
+                },
+                getBetName(e) {
+                    e = /\-\d+/.test(e) ? e.replace(/\-\d+/, "") : e;
+                    let t = /\//.test(e) ? e.split("/") : [e]
+                      , s = []
+                      , i = this.util.substrGameName(this.nowGame.gameName);
+                    return t.forEach(e => {
+                        let t = e.replace(/\./g, "");
+                        s.push(/10_/.test(t) ? t.replace(/10_/, "") : this.$t(`gameBetOptionName.${i}_${t}`))
+                    }
+                    ),
+                    s.join("-")
+                },
+                hilo_getRandomCard() {
+                    let e = this.gameConfig.info.options[Math.floor(52 * Math.random())];
+                    this.hilo_userCard = e
+                },
+                changeUserCard() {
+                    this.openNewHiloRound()
+                },
+                selBetNum(e) {
+                    if (this.nowGame.isGuessStruc) {
+                        if (!(this.betUnitMoney && this.isGame && this.diff > 0)) {
+                            if (!this.judgeBetMoney())
+                                return;
+                            return void this.toast(this.$t("gameBetOptionName.goOrderTip"))
+                        }
+                        {
+                            if (this.isDoBetNow || !e.isFoggy)
+                                return;
+                            this.isDoBetNow = !0;
+                            let t = {
+                                frontTime: (new Date).getTime() - this.diff_server,
+                                serviceCode: this.gameConfig.info.serviceCode,
+                                subServiceCode: this.gameConfig.info.subServiceCode,
+                                issue: this.currentIssue || this.gameConfig.order.issue || this.curOrderData.currentIssue,
+                                orderAmount: this.toFloor(this.betUnitMoney, this.numberScale),
+                                orderAmountDetail: this.toFloor(this.betUnitMoney, this.numberScale),
+                                orderDetail: e.index,
+                                expand: JSON.stringify({
+                                    MS: {
+                                        mines: 5
+                                    }
+                                })
+                            };
+                            console.log(e, "aaa"),
+                            this.$api(this.api.game.addOrder, t).then(t => {
+                                if (200 == t.code) {
+                                    this.isDoBetNow = !1;
+                                    let s = t.data.status;
+                                    3 != s && (this.diamondNum -= 1),
+                                    this.orderDetail += `,${e.index}:${2 == s ? 1 : -1}`,
+                                    e.isFoggy = !1,
+                                    e.isNotUser = !1,
+                                    e.isMine = !1,
+                                    3 == s && (this.isGame = !1,
+                                    e.isMine = !0,
+                                    this.toast(this.$t("gameBetOptionName.gameOver")),
+                                    t.data.expand.map && t.data.expand.map.length && (t.data.expand.map.forEach( (e, t) => {
+                                        e.forEach( (e, s) => {
+                                            e.isFoggy = !1,
+                                            this.guessOption[t][s].isFoggy && (e.isNotUser = !0)
+                                        }
+                                        )
+                                    }
+                                    ),
+                                    this.$store.commit("setGameConfigOption", t.data.expand.map)),
+                                    this.inv_timeBar && (clearInterval(this.inv_timeBar),
+                                    this.inv_timeBar = null,
+                                    this.timeBar = "00:00:00")),
+                                    this.getCQKConfig()
+                                } else
+                                    t.msg && this.toast(t.msg)
+                            }
+                            )
+                        }
+                    } else
+                        e.isSel = !e.isSel
+                },
+                judgeBetMoney() {
+                    return +this.betUnitMoney ? +this.betUnitMoney && !this.util.regObj.numNoZeroAndDotMax3.test(this.betUnitMoney) ? (this.toast(this.$t("version4.geshi")),
+                    !1) : this.betUnitMoney < +this.gameConfig.info.minAmount ? (this.toast(this.$t("version3.minBetAmount") + this.gameConfig.info.minAmount + "" + this.legalTender),
+                    !1) : this.betUnitMoney > +this.gameConfig.info.maxAmount ? (this.toast(this.$t("version3.maxBetAmount") + this.gameConfig.info.maxAmount + "" + this.legalTender),
+                    !1) : !(+this.totalBetUsdt > +this.gameConfig.balance) || (this.toast(this.$t("version3.outOfBalance")),
+                    !1) : (this.toast(this.$t("version3.chooseBetMoney")),
+                    !1)
+                },
+                SD_CircleAnimation(e, t) {
+                    var s, i, a, n, l = document.querySelectorAll(".circle");
+                    l.forEach(e => {
+                        e.style.display = "inline-block"
+                    }
+                    ),
+                    "move" == e ? (s = p[Math.floor(Math.random() * p.length)],
+                    i = p[Math.floor(Math.random() * p.length)],
+                    a = p[Math.floor(Math.random() * p.length)],
+                    n = p[Math.floor(Math.random() * p.length)]) : (s = +t[0],
+                    i = +t[1],
+                    a = +t[2],
+                    n = +t[3]),
+                    l[0].classList = s ? "circle redCircle_sd" : "circle whiteCircle_sd",
+                    l[1].classList = i ? "circle redCircle_sd" : "circle whiteCircle_sd",
+                    l[2].classList = a ? "circle redCircle_sd" : "circle whiteCircle_sd",
+                    l[3].classList = n ? "circle redCircle_sd" : "circle whiteCircle_sd"
+                },
+                transitionendCb() {
+                    this.rltRunningAction(!1)
+                },
+                openSystemCardCb() {
+                    this.hilo_systemCard = this.hilo_systemCard_copy
+                },
+                systemCardAniCb() {
+                    this.isShowCard = !0,
+                    this.excuteSendCard_system = !1,
+                    this.excuteSendCard_user = !1,
+                    this.isMoveCardAfterOpen = !1,
+                    this.isAnimateTime = !1,
+                    this.isThrowCard = !1
+                },
+                cardAnimationCb() {
+                    console.log("动画完成"),
+                    this.isShowCard = !0,
+                    this.excuteSendCard_system = !1,
+                    this.excuteSendCard_user = !1,
+                    this.isMoveCardAfterOpen = !1,
+                    this.isAnimateTime = !1,
+                    this.isThrowCard = !1,
+                    this.hilo_getRandomCard()
+                },
+                rltRunningAction(e) {
+                    this.$refs.turnLight.style.opacity = 1,
+                    this.$refs.turnLight.className = e ? "turnLight" : "turnLight running",
+                    this.$refs.centerOpenNum.innerText = this.gameConfig.lastIssue.resultVal.value,
+                    this.$refs.centerOpenNum.style.opacity = 1,
+                    this.$refs.centerOpenNum.className += " " + this.rltOpenNumBgMap[this.gameConfig.lastIssue.resultVal.simpleResultFormatList[1].optionVal[0]],
+                    this.getCurRoundBetOrder()
+                },
+                turnWheel(e=!1, t, s=!1) {
+                    if (e) {
+                        let e, i = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26], a = i.findIndex(e => e == t);
+                        "" !== (null !== a && void 0 !== a ? a : "") && (e = 360 + 360 * a / i.length - this.lastAngle % 360 + this.lastAngle,
+                        this.lastAngle = e),
+                        this.$refs.wheel_light.style.transform = `rotate(${e}deg)`,
+                        s ? this.rltRunningAction(s) : this.$refs.wheel_light.style.transition = "all 3s ease"
+                    } else
+                        this.$refs.wheel_light.style.transition = "all 3s ease",
+                        this.$refs.turnLight.className = "turnLight",
+                        this.lastAngle += 14,
+                        -1 == this.$refs.turnLight.className.indexOf("running") && (this.$refs.centerOpenNum.className = "centerOpenNum",
+                        this.$refs.centerOpenNum.style.opacity = 0,
+                        this.$refs.turnLight.style.opacity = 0,
+                        this.$refs.wheel_light.addEventListener("transitionend", this.transitionendCb)),
+                        this.$refs.wheel_light.style.transform = `rotate(${this.lastAngle}deg)`
+                },
+                circleAnitiom(e) {
+                    var t = document.querySelectorAll(".circle");
+                    [0, 5].includes(+e) ? t[0].style.display = "block" : t[0].style.display = "none",
+                    [0, 2, 4, 6, 8].includes(+e) ? (t[1].style.display = "block",
+                    t[2].style.display = "none") : (t[1].style.display = "none",
+                    t[2].style.display = "block")
+                },
+                judgeThisBlankIsLatest(e) {
+                    if (!this.orderDetail)
+                        return;
+                    let t = this.orderDetail.split(",")
+                      , s = t[t.length - 1].split(":");
+                    return s[0] == e && [s[0] == e, s[1]]
+                },
+                documentClick(e) {
+                    var t = this
+                      , s = document.querySelectorAll(".symbolParent")[0]
+                      , i = e.target || e.srcElement;
+                    s && (s == i || s.contains(i)) ? t.isShowSymbolDialog = !t.isShowSymbolDialog : t.isShowSymbolDialog = !1
+                },
+                clearAllInterval() {
+                    C && (clearInterval(C),
+                    C = null)
+                },
+                openAnimation(e, t, s, i=!1) {
+                    if ("move" == s)
+                        if (this.isSDGame)
+                            this.SD_CircleAnimation("move", "");
+                        else if (this.isHLGame)
+                            e[0].innerHTML = u[Math.floor(Math.random() * u.length)],
+                            this.circleAnitiom(e[0].innerHTML);
+                        else if ("RD100N" == this.nowGame.gameName)
+                            e[0].innerHTML = Math.floor(10 * Math.random()),
+                            e[1].innerHTML = Math.floor(10 * Math.random()),
+                            e[2].innerHTML = "";
+                        else {
+                            let t = [];
+                            this.isFTGame ? t = m : this.isCQKGame ? t = r : this.isQTGame ? t = this.randomData_QT : this.isKNGame ? t = c : this.nowGame.lotStruc ? t = h : this.isTWTLGame ? t = d : this.nowGame.luckyWheelStruc ? t = g : (this.isLK28Game || this.isFSTGame || this.isTSGame) && (t = u),
+                            e.forEach(e => {
+                                this.isQTGame ? e.src = t[Math.floor(Math.random() * t.length)] : e.innerText = t[Math.floor(Math.random() * t.length)],
+                                this.isFTGame && (e.className = `openNum FT_${e.innerText}Style FT_Style`)
+                            }
+                            ),
+                            this.nowGame.luckyWheelStruc && this.turnWheel(!1)
+                        }
+                    else if (console.log("渲染开奖动画"),
+                    ["RULTI", "RB"].includes(this.nowGame.gameName) || this.nowGame.luckyWheelStruc || this.getCurRoundBetOrder(),
+                    ["RULTI"].includes(this.nowGame.gameName) && !i)
+                        this.start();
+                    else if ("RB" == this.nowGame.gameName) {
+                        var a = setInterval( () => {
+                            this.$refs.RB && this.$refs.RB.start && (clearInterval(a),
+                            this.$refs.RB && this.$refs.RB.start(i))
+                        }
+                        , 10);
+                        this.$once("hook:beforeDestroy", () => {
+                            clearInterval(a)
+                        }
+                        )
+                    } else
+                        this.isSDGame ? this.SD_CircleAnimation("stop", t) : this.isRD100NGame ? (e[0].innerHTML = t[0] || "",
+                        e[1].innerHTML = t[1] || "",
+                        t[2] && (e[2].innerHTML = t[2] || "")) : this.isHLGame || this.isCQKGame ? (e[0].innerHTML = t[0],
+                        this.isCQKGame ? (e[1].innerHTML = t[1],
+                        e[2].innerHTML = t[5],
+                        e[3].innerHTML = t[6],
+                        e[4].innerHTML = t[7],
+                        e[5].innerHTML = t[8]) : this.circleAnitiom(t[0])) : (e.forEach( (s, i) => {
+                            this.isQTGame ? s.src = this.randomData_QT[t[i] - 1] : (this.isLK28Game || this.isFSTGame || this.isTSGame) && i == e.length - 1 ? s.innerText = t.reduce( (e, t) => e + +t, 0) : s.innerText = t[i],
+                            this.isFTGame && (s.className = `openNum FT_${s.innerText}Style FT_Style`),
+                            this.nowGame.luckyWheelStruc && (s.innerText = t.join(""))
+                        }
+                        ),
+                        this.nowGame.luckyWheelStruc && this.turnWheel(!0, t.join(""), i))
+                },
+                chooseHILOBetOption(e) {
+                    "gt" == e && 13 == this.hilo_userCard.card.num || "lt" == e && 1 == this.hilo_userCard.card.num || (this.plusMinusValue ? this.plusMinusValue.includes(e) ? this.plusMinusValue = this.plusMinusValue.filter(t => t != e) : this.plusMinusValue.push(e) : this.plusMinusValue = [e])
+                },
+                updateHeight() {
+                    this.$nextTick( () => {
+                        if (this.nowGame.isGuessStruc)
+                            ;
+                        else {
+                            let e = window.innerHeight - document.querySelector(".cHeader").scrollHeight - (this.$refs.issueWrap && this.$refs.issueWrap.scrollHeight || 0) - this.$refs.betOrder.scrollHeight - this.$refs.betBtnBox.scrollHeight + "px";
+                            this.$refs.pageContent.style.height = e
+                        }
+                    }
+                    )
+                },
+                sendCard(e) {
+                    e ? (this.excuteSendCard_system = !0,
+                    this.$refs.send_systemCard.addEventListener("animationend", this.systemCardAniCb),
+                    this.$once("hook:beforeDestroy", () => {
+                        this.$refs.send_systemCard.removeEventListener("animationend", this.systemCardAniCb)
+                    }
+                    )) : (this.excuteSendCard_system = !0,
+                    this.excuteSendCard_user = !0,
+                    this.$refs.send_userCard.addEventListener("animationend", this.cardAnimationCb),
+                    this.$once("hook:beforeDestroy", () => {
+                        this.$refs.send_userCard.removeEventListener("animationend", this.cardAnimationCb)
+                    }
+                    ))
+                },
+                startNextRound() {
+                    this.historyData.unshift({
+                        card: this.hilo_systemCard
+                    }),
+                    this.hilo_systemCard = null,
+                    this.hilo_systemCard_copy = null,
+                    this.isThrowCard = !0,
+                    this.sendCard(!0),
+                    this.getCQKConfig()
+                },
+                openNewHiloRound() {
+                    console.log("开启新一轮"),
+                    this.isMoveCardAfterOpen = !0,
+                    this.plusMinusValue = "",
+                    this.sendCard()
+                },
+                togglePage() {
+                    document.hidden ? (this.clearAllInterval(),
+                    this.$refs.RB && this.$refs.RB.stopAnime()) : (this.getCQKConfig(!1, !0),
+                    this.nowGame.getHistoryWhenEnterGame && (this.historyData = [],
+                    this.startIndex = 1,
+                    this.scrollState = 1,
+                    this.getHistory()))
+                }
+            },
+            created() {
+                this.inv = setInterval( () => {
+                    var e, t;
+                    if (null !== (e = this.$store.state) && void 0 !== e && e.yx && null !== (t = this.$store.state.yx) && void 0 !== t && t.gameConfig && Object.keys(this.$store.state.yx.gameConfig).length) {
+                        clearInterval(this.inv),
+                        this.inv = null,
+                        this.initData();
+                        var s = this.util.getStore({
+                            name: "isCurRoundBet"
+                        });
+                        if (s == this.curIssue + this.nowGame.gameName && (this.isGame = !0),
+                        this.nowGame.hasCountDown) {
+                            this.getTimeBar(),
+                            this.startInterval( () => {
+                                this.getTimeBar()
+                            }
+                            , 1e3),
+                            this.$once("hook:beforeDestroy", () => {
+                                window.clearInterval(_),
+                                _ = null
+                            }
+                            );
+                            let e = document.querySelectorAll(this.isSDGame ? ".circle" : ".openNum");
+                            this.gameConfig.lastIssue.resultVal && this.gameConfig.lastIssue.resultVal.value ? this.setResultAniData(this.gameConfig, e) : C || (console.log("展示开奖动画"),
+                            C = window.setInterval( () => {
+                                this.openAnimation(e, "", "move")
+                            }
+                            , 100),
+                            this.$once("hook:beforeDestroy", () => {
+                                clearInterval(C),
+                                C = null
+                            }
+                            )),
+                            this.nowGame.getHistoryWhenEnterGame && this.getHistory()
+                        } else
+                            this.nowGame.isGuessStruc ? (this.timeBar = "00:00:00",
+                            this.gameConfig.order && (this.isGame = this.gameConfig.order.orderAmount,
+                            this.betUnitMoney = +this.gameConfig.order.orderAmount,
+                            this.orderDetail = this.gameConfig.order.orderDetail,
+                            this.orderNo = this.gameConfig.order.orderNo,
+                            this.guessOption.forEach(e => {
+                                let t = e.filter(e => !e.isFoggy && !e.isMine);
+                                this.diamondNum -= t && t.length || 0
+                            }
+                            ),
+                            this.getGuessTimeBar(this.gameConfig.order.startSettleTime),
+                            this.inv_timeBar = setInterval( () => {
+                                this.getGuessTimeBar(this.gameConfig.order.startSettleTime)
+                            }
+                            , 1e3),
+                            this.$once("hook:beforeDestroy", () => {
+                                window.clearInterval(this.inv_timeBar),
+                                this.inv_timeBar = null
+                            }
+                            )),
+                            this.currentIssue = this.gameConfig.myInfo.currentIssue) : this.nowGame.isCardGame && (this.sendCard(),
+                            this.getOrderHistroy(),
+                            this.currentIssue = this.gameConfig.myInfo.currentIssue);
+                        setTimeout( () => {
+                            this.updateHeight()
+                        }
+                        , 150)
+                    }
+                }
+                , 100),
+                this.$parent.$on("clearLastGame", () => {
+                    this.timeBar = "",
+                    this.showHistory = !1,
+                    this.isChangeGameNow = !0,
+                    C && (clearInterval(C),
+                    C = null)
+                }
+                )
+            },
+            mounted() {
+                document.addEventListener("visibilitychange", this.togglePage)
+            },
+            beforeDestroy() {
+                document.removeEventListener("touchend", this.documentClick),
+                this.$refs.wheel_light && this.$refs.wheel_light.removeEventListener("transitionend", this.transitionendCb),
+                document.removeEventListener("visibilitychange", this.togglePage),
+                this.inv && (clearInterval(this.inv),
+                this.inv = null),
+                C && (clearInterval(C),
+                C = null),
+                this.showHistory = !1,
+                this.util.browser.forbiddenBtmScroll(!1)
+            },
+            watch: {
+                isWaitForResult(e, t) {
+                    e != t && e && (this.popupVisible = !1)
+                }
+            },
+            computed: {
+                rottlePanelBoxMul() {
+                    return new o.a(36).mul(this.gameConfig.info.expValue)
+                },
+                totalBetUsdt() {
+                    return this.toFloor(new o.a(this.userBetNum || 0).mul(new o.a(this.betUnitMoney || 0)), this.numberScale)
+                },
+                FT_IconMap() {
+                    return this.$store.state.FT_IconMap
+                },
+                KN_IconMap() {
+                    return this.$store.state.KN_IconMap
+                },
+                isHasOpenBlank() {
+                    let e = !1;
+                    return this.nowGame.isGuessStruc && this.guessOption.forEach(t => {
+                        let s = t.find(e => !e.isFoggy);
+                        s && (e = !0)
+                    }
+                    ),
+                    e
+                },
+                guessOption() {
+                    return this.gameConfig.info.options
+                },
+                isMaintain() {
+                    let e = this.nowGame.status <= 1;
+                    return e || this.isAnimateTime
+                },
+                getBetBtnTxt() {
+                    return this.nowGame.isGuessStruc && this.isGame ? this.$t("gameBetOptionName.settleRightNow") : this.$t("version3.doBet")
+                },
+                isDisableMoneyInputAndClear() {
+                    return this.nowGame.isGuessStruc && this.isGame
+                },
+                numberScale() {
+                    return this.$store.state.numberScale
+                },
+                diff_server() {
+                    return this.$store.state.yx.diffServer
+                },
+                SD_betOptionMap() {
+                    return this.$store.state.statusConfig.SD_betOptionMap
+                },
+                isRD100NGame() {
+                    return /^RD/.test(this.nowGame.gameName)
+                },
+                isSDGame() {
+                    return /^DS/.test(this.nowGame.gameName)
+                },
+                isCQKGame() {
+                    return /^BLK/.test(this.nowGame.gameName)
+                },
+                isHLGame() {
+                    return /^RG/.test(this.nowGame.gameName)
+                },
+                isTenGame() {
+                    return /TM|MC$/.test(this.nowGame.gameName)
+                },
+                isFTGame() {
+                    return /^SB/.test(this.nowGame.gameName)
+                },
+                isLK28Game() {
+                    return /^LK28/.test(this.nowGame.gameName)
+                },
+                isFSTGame() {
+                    return /^FST/.test(this.nowGame.gameName)
+                },
+                isTSGame() {
+                    return /^TS/.test(this.nowGame.gameName)
+                },
+                isQTGame() {
+                    return /^QT/.test(this.nowGame.gameName)
+                },
+                isLotGame() {
+                    return /^(LOT|TWLT|SPLT)/.test(this.nowGame.gameName)
+                },
+                isKNGame() {
+                    return /^KN/.test(this.nowGame.gameName)
+                },
+                isTWTLGame() {
+                    return /^TWTL/.test(this.nowGame.gameName)
+                },
+                currentUnit() {
+                    return this.$store.state.unitData
+                },
+                gameConfig() {
+                    return this.$store.state.yx && this.$store.state.yx.gameConfig
+                },
+                nowGame() {
+                    return this.$store.state.yx && this.$store.state.yx.nowGame
+                },
+                isWaitForResult() {
+                    return this.$store.state.yx && this.$store.state.yx.isTenSecond
+                },
+                orderData() {
+                    return this.nowGame.isGuessStruc ? [1] : this.nowGame.isCardGame ? this.plusMinusValue : this.isRD100NGame ? this.plusMinusValue ? [1] : [] : this.calBetDataNum()
+                },
+                userBetNum() {
+                    let e = this.orderData.length;
+                    return "FSLOT" == this.nowGame.gameName && (e = this.orderData.reduce( (e, t) => e + t.__value, 0)),
+                    this.isTWTLGame && (e = Object.keys(this.eachTopModeBetNum).reduce( (e, t) => (("S5M2" == t && 5 == this.eachTopModeBetNum[t].length || "S5T12" == t && this.eachTopModeBetNum[t].length >= 5 && this.eachTopModeBetNum[t].length <= 12) && (e += 1),
+                    e), 0)),
+                    e
+                },
+                specialGameName() {
+                    return this.$store.state.specialGameName
+                },
+                betPanelData() {
+                    let e = this.nowGame.gameStruc.curSecondBetMode ? this.nowGame.gameStruc.curTopMode + "/" + this.nowGame.gameStruc.curSecondBetMode : this.nowGame.gameStruc.curTopMode
+                      , t = Object.keys(this.nowGame.betPanelObj).find(t => t.startsWith(e));
+                    return this.nowGame.betPanelObj[t]
+                },
+                treeGameBetData() {
+                    let e = {};
+                    for (var t in this.nowGame.betPanelObj) {
+                        let s = this.nowGame.betPanelObj[t].filter(e => e.isSel);
+                        s.length && (e[t] = s)
+                    }
+                    return e
+                },
+                eachTopModeBetNum() {
+                    let e = {};
+                    for (var t in this.nowGame.betPanelObj) {
+                        let s = this.nowGame.betPanelObj[t].filter(e => e.isSel)
+                          , i = t.split("-")[0]
+                          , a = /\//.test(i) ? i.split("/")[0] : i;
+                        e[a] || (e[a] = []),
+                        s.length && (e[a] = [...e[a], ...s])
+                    }
+                    return e
+                },
+                curIssue() {
+                    var e;
+                    return null !== (e = this.gameConfig) && void 0 !== e && e.myInfo ? this.gameConfig.myInfo.currentIssue : "object" == typeof this.gameConfig.currentIssue ? this.gameConfig.currentIssue.issue : this.gameConfig.currentIssue
+                },
+                legalTender() {
+                    return this.siteConfig.legalTender || "USDT"
+                },
+                siteConfig() {
+                    return this.$store.state.thisSiteConfig
+                }
+            }
+        }
+          , b = S
+          , w = (s("0b6b"),
+        s("2877"))
+          , T = Object(w["a"])(b, i, a, !1, null, "7e64b841", null);
+        t["default"] = T.exports
+    },
+    "94f6": function(e, t, s) {}
+}]);
