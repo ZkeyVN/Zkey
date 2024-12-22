@@ -1,0 +1,143 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["chunk-c9874caa"], {
+    "390a": function(a, e, t) {},
+    "3ed5": function(a, e, t) {
+        "use strict";
+        t.r(e);
+        var s = function() {
+            var a = this
+              , e = a._self._c;
+            return e("div", {
+                staticClass: "sidePage",
+                class: {
+                    showSidePage: a.showSidePage,
+                    isInGame: a.isInGame,
+                    historyStyle: !a.isInGame
+                }
+            }, [a.showSidePage ? e("div", {
+                staticClass: "mask",
+                on: {
+                    click: function(e) {
+                        a.showSidePage = !1
+                    }
+                }
+            }) : a._e(), e("div", {
+                staticClass: "main"
+            }, [e("div", {
+                staticClass: "side_header"
+            }, [a.isInGame ? [e("span", [a._v(a._s(a.$t(a.nowGameData.alias)))]), e("icon-svg", {
+                attrs: {
+                    iconClass: "zhankai_2"
+                },
+                nativeOn: {
+                    click: function(e) {
+                        a.showSidePage = !1
+                    }
+                }
+            })] : [e("img", {
+                staticClass: "cl",
+                attrs: {
+                    src: "/images/menu_close.png",
+                    alt: ""
+                },
+                on: {
+                    click: function(e) {
+                        a.showSidePage = !1
+                    }
+                }
+            }), e("span", {
+                staticClass: "title"
+            }, [a._v(a._s(a.$t("version11.trend")))])]], 2), e("div", {
+                ref: "side_content",
+                staticClass: "side_content"
+            }, [Object.keys(a.gameData).length ? [a._l(a.gameData, (function(t, s) {
+                return [t.length ? e("div", {
+                    key: s,
+                    ref: s,
+                    refInFor: !0,
+                    staticClass: "side_coin_item",
+                    attrs: {
+                        id: s
+                    }
+                }, [e("p", {
+                    staticClass: "serialName"
+                }, [a._v(a._s(/MC/.test(s) ? a.$t(t[0].serialNameMC) : a.$t(t[0].serialName)))]), e("div", {
+                    staticClass: "timeBox"
+                }, [["FSLOT", "CRASH", "LIMBO", "MS", "HILO", "LK1U"].includes(s) ? [e("span", {
+                    staticClass: "gameSpan",
+                    class: a.nowGameData.time == t[0].time && a.nowGameData.gameName == t[0].gameName ? "active" : "",
+                    on: {
+                        click: function(e) {
+                            return a.toggleCoin(t[0])
+                        }
+                    }
+                }, [a._v(a._s(a.isInGame ? a.$t("version11.Gogame") : a.$t("pageTitle.bangzhuxiangqing")))])] : a._l(t, (function(t) {
+                    return e("span", {
+                        staticClass: "timeSpan",
+                        class: a.nowGameData.time == t.time && a.nowGameData.gameName == t.gameName ? "active" : "",
+                        on: {
+                            click: function(e) {
+                                return a.toggleCoin(t)
+                            }
+                        }
+                    }, [e("gameTime", {
+                        attrs: {
+                            gameInfo: t
+                        }
+                    })], 1)
+                }
+                )), a._l(t.length > 4 ? 8 - t.length : 4 - t.length, (function(a) {
+                    return e("span", {
+                        staticClass: "timeSpan",
+                        staticStyle: {
+                            opacity: "0"
+                        }
+                    })
+                }
+                ))], 2)]) : a._e()]
+            }
+            ))] : [e("noData", {
+                attrs: {
+                    showSlot: !0
+                }
+            }, [a._v(a._s(a.$t("common.zanwu")))])]], 2)])])
+        }
+          , i = []
+          , n = (t("14d9"),
+        {
+            name: "sidePage",
+            data() {
+                return {
+                    showSidePage: !1
+                }
+            },
+            props: ["nowGameData", "isInGame"],
+            components: {
+                noData: () => t.e("chunk-6e71cf1a").then(t.bind(null, "6a2b")),
+                gameTime: () => t.e("chunk-2d2174fa").then(t.bind(null, "c5d6"))
+            },
+            ç,
+            computed: {
+                gameData() {
+                    let a = {}
+                      , e = this.isInGame ? this.$store.state.gameInfo.filter(a => a.status) : this.$store.state.gameInfo.filter(a => a.isHasTrend);
+                    for (let t in e) {
+                        let s = e[t]
+                          , i = s.subName + (s.isLineBlockGame ? "MC" : "");
+                        a[i] || (a[i] = []),
+                        a[i].push(s)
+                    }
+                    return a
+                }
+            }
+        })
+          , o = n
+          , c = (t("ac5e"),
+        t("2877"))
+          , l = Object(c["a"])(o, s, i, !1, null, "6d68d1db", null);
+        e["default"] = l.exports
+    },
+    ac5e: function(a, e, t) {
+        "use strict";
+        t("390a")
+    }
+}]);
